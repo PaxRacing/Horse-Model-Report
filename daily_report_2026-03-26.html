@@ -314,7 +314,7 @@
   .back-to-top:hover { text-decoration: underline; }
 
   /* ── Scrollable wrapper — always active so table scrolls on mobile ── */
-  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll { overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 
   /* ── Tablet (≤900px) ── */
   @media (max-width: 900px) {
@@ -378,7 +378,7 @@
       <div class="page-subtitle">2026-03-26 &nbsp;·&nbsp; 35 races</div>
     </div>
     <div class="page-meta">
-      Generated 25 Mar 2026 21:56
+      Generated 25 Mar 2026 22:26
     </div>
   </div>
 <div class="toc"><div class="toc-races"><div class="toc-title">Races</div>
@@ -393,6 +393,7 @@
     <button class="sort-btn active" onclick="sortRaces('course', this)">Course</button>
     <button class="sort-btn" onclick="sortRaces('time', this)">Time</button>
     <button class="sort-btn" onclick="sortRaces('confidence', this)">Confidence</button>
+    <button class="sort-btn" id="consensus-filter-btn" onclick="toggleConsensus(this)">Both Agree (V1+V2)</button>
   </div>
   <div class="toc-gate-key">
     <div class="toc-title">Race type key</div>
@@ -7531,6 +7532,28 @@
     <a class="back-to-top" href="#top">&#8593; Back to top</a>
   </div>
 <script>
+let _consensusFilterOn = false;
+
+function toggleConsensus(btn) {
+  _consensusFilterOn = !_consensusFilterOn;
+  btn.classList.toggle('active', _consensusFilterOn);
+  document.querySelectorAll('.race-card, .course-label').forEach(el => {
+    if (el.classList.contains('race-card')) {
+      const isConsensus = el.dataset.consensus === '1';
+      el.style.display = (_consensusFilterOn && !isConsensus) ? 'none' : '';
+    } else {
+      // course-label: hide if all cards under it are hidden
+      let next = el.nextElementSibling;
+      let hasVisible = false;
+      while (next && !next.classList.contains('course-label')) {
+        if (next.classList.contains('race-card') && next.style.display !== 'none') hasVisible = true;
+        next = next.nextElementSibling;
+      }
+      el.style.display = (_consensusFilterOn && !hasVisible) ? 'none' : '';
+    }
+  });
+}
+
 function sortRaces(by, btn) {
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -7571,6 +7594,22 @@ function sortRaces(by, btn) {
     }
     container.appendChild(card);
   });
+
+  // Re-apply consensus filter visibility if active
+  if (_consensusFilterOn) {
+    container.querySelectorAll('.race-card').forEach(c => {
+      c.style.display = (c.dataset.consensus === '1') ? '' : 'none';
+    });
+    container.querySelectorAll('.course-label').forEach(lbl => {
+      let next = lbl.nextElementSibling;
+      let hasVisible = false;
+      while (next && !next.classList.contains('course-label')) {
+        if (next.classList.contains('race-card') && next.style.display !== 'none') hasVisible = true;
+        next = next.nextElementSibling;
+      }
+      lbl.style.display = hasVisible ? '' : 'none';
+    });
+  }
 }
 </script>
 </div></body></html>
