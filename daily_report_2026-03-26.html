@@ -313,8 +313,13 @@
   }
   .back-to-top:hover { text-decoration: underline; }
 
-  /* ── Scrollable wrapper — always active so table scrolls on mobile ── */
-  .table-scroll { overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+  /* ── Scrollable wrapper — scrolls on mobile, no visible bar on desktop ── */
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* Hide scrollbar on desktop (content fits); keep it available on mobile */
+  @media (min-width: 901px) {
+    .table-scroll::-webkit-scrollbar { display: none; }
+    .table-scroll { scrollbar-width: none; }
+  }
 
   /* ── Tablet (≤900px) ── */
   @media (max-width: 900px) {
@@ -378,7 +383,7 @@
       <div class="page-subtitle">2026-03-26 &nbsp;·&nbsp; 35 races</div>
     </div>
     <div class="page-meta">
-      Generated 25 Mar 2026 23:30
+      Generated 26 Mar 2026 19:09
     </div>
   </div>
 <div class="toc"><div class="toc-races"><div class="toc-title">Races</div>
