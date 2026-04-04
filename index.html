@@ -130,25 +130,25 @@
   .race-header-right { display: flex; flex-direction: column;
                         align-items: flex-end; gap: 6px; flex-shrink: 0; }
 
-  /* ── Confidence badge ── */
-  .conf-badge {
+  /* ── Gate score badge — primary, shown large ── */
+  .gate-badge {
     padding: 5px 16px; border-radius: 20px;
     font-weight: 800; font-size: 1.05em; white-space: nowrap;
     letter-spacing: 0.01em;
   }
-  .conf-high  { background: #e0f5eb; color: #2e7d52; }
-  .conf-mid   { background: #fdf0c2; color: #8a6500; }
-  .conf-low   { background: #fde0e0; color: #c0404a; }
+  .gate-high   { background: #daf0e3; color: #276644; }
+  .gate-mid    { background: #fef3cd; color: #7a5c00; }
+  .gate-low    { background: #fde8e8; color: #a83030; }
 
-  /* ── Gate score badge ── */
-  .gate-badge {
+  /* ── Confidence badge — secondary, shown smaller ── */
+  .conf-badge {
     padding: 3px 12px; border-radius: 14px;
     font-weight: 600; font-size: 0.82em; white-space: nowrap;
     letter-spacing: 0.01em; opacity: 0.92;
   }
-  .gate-high   { background: #daf0e3; color: #276644; }
-  .gate-mid    { background: #fef3cd; color: #7a5c00; }
-  .gate-low    { background: #fde8e8; color: #a83030; }
+  .conf-high  { background: #e0f5eb; color: #2e7d52; }
+  .conf-mid   { background: #fdf0c2; color: #8a6500; }
+  .conf-low   { background: #fde0e0; color: #c0404a; }
 
 
   /* ── Consensus pick marker ── */
@@ -391,7 +391,7 @@
       <div class="page-subtitle">2026-04-04 &nbsp;·&nbsp; 55 races</div>
     </div>
     <div class="page-meta">
-      Generated 04 Apr 2026 19:13
+      Generated 04 Apr 2026 20:01
     </div>
   </div>
 <div class="toc"><div class="toc-races"><div class="toc-title">Races</div>
@@ -433,8 +433,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-high" title="Gate score 9/10">Gate 9/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -642,8 +642,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -800,8 +800,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -1026,8 +1026,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -1235,8 +1235,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -1444,8 +1444,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -1636,8 +1636,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -1828,8 +1828,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -2004,8 +2004,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -2162,8 +2162,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -2337,8 +2337,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -2580,8 +2580,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -2806,8 +2806,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 9/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-high">Confidence 9/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -3032,8 +3032,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -3207,8 +3207,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-low" title="Gate score 3/10">Gate 3/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -3417,8 +3417,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -3762,8 +3762,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -3988,8 +3988,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -4316,8 +4316,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -4780,8 +4780,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-low" title="Gate score 1/10">Gate 1/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -5176,8 +5176,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-low" title="Gate score 1/10">Gate 1/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -5538,8 +5538,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -5714,8 +5714,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 8/10</span>
         <span class="gate-badge gate-high" title="Gate score 9/10">Gate 9/10</span>
+        <span class="conf-badge conf-high">Confidence 8/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -5889,8 +5889,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -6115,8 +6115,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -6307,8 +6307,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-low" title="Gate score 3/10">Gate 3/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -6635,8 +6635,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -6793,8 +6793,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -6985,8 +6985,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-low" title="Gate score 3/10">Gate 3/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7229,8 +7229,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-high" title="Gate score 9/10">Gate 9/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7404,8 +7404,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-high" title="Gate score 9/10">Gate 9/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7511,8 +7511,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7669,8 +7669,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7810,8 +7810,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 7/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-high">Confidence 7/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -7985,8 +7985,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -8161,8 +8161,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -8302,8 +8302,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -8511,8 +8511,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -8652,8 +8652,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-low" title="Gate score 1/10">Gate 1/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -8912,8 +8912,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-low" title="Gate score 1/10">Gate 1/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -9189,8 +9189,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -9415,8 +9415,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -9676,8 +9676,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -9919,8 +9919,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10094,8 +10094,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 6/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-mid">Confidence 6/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10252,8 +10252,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10427,8 +10427,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10585,8 +10585,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-high">Confidence 8/10</span>
         <span class="gate-badge gate-low" title="Gate score 2/10">Gate 2/10</span>
+        <span class="conf-badge conf-high">Confidence 8/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10863,8 +10863,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-high" title="Gate score 10/10">Gate 10/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -10953,8 +10953,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 2/10</span>
         <span class="gate-badge gate-mid" title="Gate score 5/10">Gate 5/10</span>
+        <span class="conf-badge conf-low">Confidence 2/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -11128,8 +11128,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-high" title="Gate score 9/10">Gate 9/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -11303,8 +11303,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 5/10</span>
         <span class="gate-badge gate-mid" title="Gate score 4/10">Gate 4/10</span>
+        <span class="conf-badge conf-mid">Confidence 5/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -11495,8 +11495,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 3/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 3/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -11653,8 +11653,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-low">Confidence 1/10</span>
         <span class="gate-badge gate-mid" title="Gate score 6/10">Gate 6/10</span>
+        <span class="conf-badge conf-low">Confidence 1/10</span>
       </div>
     </div>
     <div class="table-scroll">
@@ -11828,8 +11828,8 @@
         </div>
       </div>
       <div class="race-header-right">
-        <span class="conf-badge conf-mid">Confidence 4/10</span>
         <span class="gate-badge gate-high" title="Gate score 7/10">Gate 7/10</span>
+        <span class="conf-badge conf-mid">Confidence 4/10</span>
       </div>
     </div>
     <div class="table-scroll">
