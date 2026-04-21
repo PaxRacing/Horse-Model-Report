@@ -223,8 +223,8 @@
   }
   .runner:last-child { border-bottom: none; }
   .runner:hover { background: #f8fafc; }
-  .runner.top3  { background: #fefce8; }
-  .runner.top3:hover { background: #fefce8; }
+  .runner.top3  { background: var(--surface); }
+  .runner.top3:hover { background: var(--surface2); }
   .runner.winner { background: var(--green-bg); }
 
   .cell { padding: 0 10px; }
@@ -443,7 +443,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -461,7 +460,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Fairye Forth</span><span class="rp-comment rp-comment-short">Irish point winner; respectable third on recent rules debut but has a lot to find here</span><span class="rp-comment rp-comment-full">Irish point winner who was very respectable third of seven on recent rules debut at Chepstow (2m7f, good to soft); will find much easier opportunities than this in due course, though.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -479,7 +477,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Kings Champion</span><span class="rp-comment rp-comment-short">Easy winner at Ayr and not discredited when clear second to useful rival last time</span><span class="rp-comment rp-comment-full">Won easily at Ayr (2m4f, soft) in January, his second hurdling start, and was not discredited when second to useful rival at Taunton (2m3f, heavy; front pair well clear) in February; ought to make his presence felt.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -497,7 +494,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Crystal Island</span><span class="rp-comment rp-comment-short">Irish point winner who impressed on rules debut at Ascot in December; good prospect</span><span class="rp-comment rp-comment-full">Joined Nicky Henderson after winning Irish point debut just over a year ago and impressed when beating useful rivals on rules debut at Ascot (2m5f, soft) in December; not seen since but remains a very good prospect.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -515,7 +511,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Rathkenny</span><span class="rp-comment rp-comment-short">Pulled up in competitive handicap last time but looked promising beforehand; e-w claims</span><span class="rp-comment rp-comment-full">Pulled up in last month's EBF Final at Sandown but looked promising beforehand, most notably when winning Doncaster maiden (2m3f, soft) in January; each-way claims if back on song.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -533,7 +528,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Dylans Moon</span><span class="rp-comment rp-comment-short">Made pleasing debut when third at Uttoxeter last month but needs a good step forward here</span><span class="rp-comment rp-comment-full">Made pleasing debut when third of nine in Uttoxeter novice hurdle (2m4f, soft) last month and has obvious scope for improvement but needs to take a good step forward here.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -551,7 +545,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Cedar Creek</span><span class="rp-comment rp-comment-short">Promising in bumpers last season but makes hurdle debut after long layoff and in good race</span><span class="rp-comment rp-comment-full">Flat-bred 5yo who won good-ground junior bumper at Aintree in November 2024 and was not disgraced in Cheltenham Listed event a few weeks later; makes hurdle debut after 475-day absence and in a strong race, though.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -569,7 +562,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Axel Bleue</span><span class="rp-comment rp-comment-short">Fair form when second twice in October but absent since pulled up in November; tough task</span><span class="rp-comment rp-comment-full">Point and dual bumper winner in 2025; fair form when runner-up in two 2m7f novice hurdles in October but absent since pulled up on handicap debut in November and faces tough assignment here.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -587,7 +579,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Uptown Dandy</span><span class="rp-comment rp-comment-short">Fairly useful form when winning C&D maiden last month; probably needs more again today</span><span class="rp-comment rp-comment-full">Delivered on earlier promise when winning C&D (heavy) maiden last month, recovering well from slow jump at third-last flight; ran to fairly useful level that day but probably needs to improve again to land this prize.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -605,7 +596,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Malinaero</span><span class="rp-comment rp-comment-short">Showed only minor promise on first two outings (bumper/2m3f hurdle)</span><span class="rp-comment rp-comment-full">Showed only minor promise on first two outings (bumper/2m3f hurdle) and cannot be recommended in this company.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -623,7 +613,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Home Made Hero</span><span class="rp-comment rp-comment-short">Good winner on hurdle debut in October but might have to settle for a minor role here</span><span class="rp-comment rp-comment-full">Drew 12l clear to make winning rules debut at Uttoxeter (2m4f, good to soft) in October and also ran well on next two outings, albeit a late faller on first occasion; might have to settle for a minor role in this deep race, though.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -641,7 +630,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Pappariche</span><span class="rp-comment rp-comment-short">Well-beaten 100-1 shot over C&D on rules debut nine days ago</span><span class="rp-comment rp-comment-full">Won a small-field Irish point last February (heavy ground) but was well-beaten 100-1 shot over C&D on rules debut nine days ago.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -659,7 +647,6 @@
       </div>
 
       <div class="runner " data-win-rank="12">
-        <div class="cell center">12</div>
         <div class="cell"><span class="horse-name">Yellow Card</span><span class="rp-comment rp-comment-short">Dual Flat winner; made disappointing start to hurdling career last year; far too risky</span><span class="rp-comment rp-comment-full">Dual Flat winner with some fairly useful middle-distance form on his CV; unseated rider at second flight on hurdle debut in September, though, and was well beaten at Fontwell the following month.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -699,7 +686,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -717,7 +703,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Eaststone Bucks</span><span class="rp-comment rp-comment-short">Kept on for second on handicap debut; 2lb wrong here but remains unexposed</span><span class="rp-comment rp-comment-full">Well beaten in his three qualifying races (1m7f-2m4f) but fared better when keeping-on second (no match for winner) on handicap debut at Stratford (2m6f, soft) six weeks ago; 2lb wrong here but remains unexposed.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -735,7 +720,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Hidden Target</span><span class="rp-comment rp-comment-short">Kept on for third at Chepstow (2m3f) last month and can improve again over 3m</span><span class="rp-comment rp-comment-full">Bettered low-key handicap debut when keeping-on third at Chepstow (2m3f, good to soft) last month; 1lb lower here and pedigree suggests this longer trip will suit; high on the list.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -753,7 +737,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Kastellion</span><span class="rp-comment rp-comment-short">Placed over 2m4f on handicap debut but shade disappointing when upped to 2m7f last month</span><span class="rp-comment rp-comment-full">Kept on for third on handicap debut at Southwell (2m4f, soft) in February but was disappointing favourite when weakening fourth at Bangor (2m7f, good) last month and needs a better effort here.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -771,7 +754,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Smile Back</span><span class="rp-comment rp-comment-short">Placed in three of her four handicaps but not making any progress; others appeal more</span><span class="rp-comment rp-comment-full">Placed in three of her four handicaps but was beaten about 19l when weakening third at Carlisle (3m1f, soft) in February and is not making any progress; hood left off here; stablemate Hidden Target appeals more.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -789,7 +771,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Air Apparent</span><span class="rp-comment rp-comment-short">Third in 2m3f maiden last month and open to more improvement in staying handicaps</span><span class="rp-comment rp-comment-full">Kept on for third in Hereford maiden (2m3f, good) last month, his fourth start over hurdles, and has plenty of scope for further improvement in staying handicaps; no surprise if he features.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -807,7 +788,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Washington Parks</span><span class="rp-comment rp-comment-short">0-6 over hurdles in Ireland and absent for a year but worth a market check on stable debut</span><span class="rp-comment rp-comment-full">0-6 over hurdles when based in Ireland and absent since two down-the-field handicap runs last April (2m3f/2m4f), but still worth a glance in the betting before this stable debut; tongue-tie added.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -825,7 +805,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Fanny Moon</span><span class="rp-comment rp-comment-short">Unexposed after only four hurdle runs but was soundly beaten on handicap debut (2m3f)</span><span class="rp-comment rp-comment-full">Unexposed after only four hurdle runs but was soundly beaten on last month's handicap debut at Bangor (2m3f, good); goes beyond about 2m5f for first time here.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -843,7 +822,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Dessie Haze</span><span class="rp-comment rp-comment-short">Stayed on well to beat well-handicapped, odds-on favourite at Chepstow this month</span><span class="rp-comment rp-comment-full">Beat well-handicapped, odds-on favourite when staying on well to open account at Chepstow (2m7f, good to soft) 19 days ago, his eighth start over hurdles; 6lb higher here but may yet have more to offer.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -861,7 +839,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Getaway King</span><span class="rp-comment rp-comment-short">Won three chases in the autumn; has cheekpieces added for this hurdling debut</span><span class="rp-comment rp-comment-full">Ex-Irish 8yo who started off for Fergal O'Brien with three chase wins (2m4f-2m5f) in the autumn; returned with a lesser effort in February and fell when last in action but remains unexposed over 3m; sports first-time cheekpieces for hurdling debut; could have a say.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -879,7 +856,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Stiletto</span><span class="rp-comment rp-comment-short">Three wins in early part of season; probably needed last month's run; Bowen back aboard</span><span class="rp-comment rp-comment-full">Did well for new stable in early part of season, winning three times under Sean Bowen (2m2f-3m, good/good to soft); returned from break with low-key run last month but has the champion jockey back on board today.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -897,7 +873,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Glenmuick</span><span class="rp-comment rp-comment-short">Soundly beaten in first three handicaps; up in trip with cheekpieces added today</span><span class="rp-comment rp-comment-full">Soundly beaten in first three handicap hurdles (2m-2m4f); needs combination of new trip and first-time cheekpieces to enable huge improvement.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -915,7 +890,6 @@
       </div>
 
       <div class="runner " data-win-rank="12">
-        <div class="cell center">12</div>
         <div class="cell"><span class="horse-name">Golden Prince</span><span class="rp-comment rp-comment-short">Placed when upped to 2m7f for recent handicap debut and probably still has potential</span><span class="rp-comment rp-comment-full">Unexposed 5yo who was evidently suited by the hike up in trip when third on handicap debut at Bangor (2m7f, good) three weeks ago; probably still has potential; might be the answer.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -933,7 +907,6 @@
       </div>
 
       <div class="runner " data-win-rank="13">
-        <div class="cell center">13</div>
         <div class="cell"><span class="horse-name">Moon Over Clyro</span><span class="rp-comment rp-comment-short">Struggled in first two handicaps (2m3f/2m2f); up in trip with cheekpieces added here</span><span class="rp-comment rp-comment-full">Placed in two 2m Worcester maidens towards end of last summer but struggled in his first two handicaps (2m3f/2m2f); hiked up in trip with cheekpieces added today; leap of faith required to support him.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -973,7 +946,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -991,7 +963,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Gaelic Rambler</span><span class="rp-comment rp-comment-short">Second to a next-time-out winner last month and still has low mileage; contender</span><span class="rp-comment rp-comment-full">Low-mileage 6yo who unseated rider on chase/handicap debut in January but has made the frame on all three starts since; form of last month's Wetherby second (1m7f, good; first-time cheekpieces) has recently been franked by the winner, and this fellow ought to be suited by this move back up in trip; contender.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -1009,7 +980,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Jeu dOpale</span><span class="rp-comment rp-comment-short">Ready winner on heavy ground in February, his sixth British start; up 9lb</span><span class="rp-comment rp-comment-full">Ex-French 8yo who opened British account at sixth attempt, with ready success at Wincanton (2m4f, heavy) in February; 9lb higher here and may not want the ground to dry out too much but further progress is possible.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -1027,7 +997,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Hold Up La Colmine</span><span class="rp-comment rp-comment-short">Wide-margin winner on seasonal debut but subsequent form underwhelming; cheekpieces added</span><span class="rp-comment rp-comment-full">Won by wide-margin on seasonal debut at Windsor (2m4f, good to soft) in November but subsequent hurdle/chase form has been underwhelming; needs new cheekpieces to provoke a response.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -1045,7 +1014,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Brulure Noire</span><span class="rp-comment rp-comment-short">Failed to complete both races this season but was clear second over C&D a year ago</span><span class="rp-comment rp-comment-full">Three-time chase winner (twice here); has form-figures of PU during light campaign this season but is 2lb lower than when clear second over C&D (soft; also suited by good to soft) a year ago; can't be ruled out.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -1063,7 +1031,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Jaccours</span><span class="rp-comment rp-comment-short">Course hurdle winner; flopped on chase/handicap debut but may still have potential</span><span class="rp-comment rp-comment-full">1-5 over hurdles, the win gained in course maiden (2m4f, heavy) in January; flopped when warm favourite for chase/handicap debut the following month but could still have a good future over fences.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1081,7 +1048,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Calli Black</span><span class="rp-comment rp-comment-short">Won at Worcester last spring but subsequent form was disappointing; back from a break</span><span class="rp-comment rp-comment-full">Won readily at Worcester (2m4f, good) last spring and is still lightly raced over fences but her subsequent three runs (latest was over hurdles) were disappointing and she's 2lb wrong on first outing since December.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1099,7 +1065,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Lermoos Legend</span><span class="rp-comment rp-comment-short">Runs this track very well but has been absent since October</span><span class="rp-comment rp-comment-full">Gained five of his nine chase wins at this track (2m/2m3f) but absent since below-par run in October and still on a fairly tough mark.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1117,7 +1082,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Latenightrumble</span><span class="rp-comment rp-comment-short">Seemingly back in good form two starts ago; back in trip with new headgear tried here</span><span class="rp-comment rp-comment-full">On a good mark now and was seemingly back in good form when close fourth of 11 at Chepstow (2m7f, soft) in February; tended to jump left and was below that level without cheekpieces at Carlisle (3m) last month but has possibilities if combination of drop back in trip, first-time blinkers and return to a left-handed track has desired effect.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -1135,7 +1099,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Bowenspark</span><span class="rp-comment rp-comment-short">Good winner at Bangor in February but safely held since; cheekpieces given another whirl</span><span class="rp-comment rp-comment-full">Came good over fences with small-field win at Uttoxeter (2m4f, good to soft) in February but was not in the same form on his latest outing and ran poorly the only previous time he wore cheekpieces; others look safer.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1175,7 +1138,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -1193,7 +1155,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Thankyouandplease</span><span class="rp-comment rp-comment-short">Dual 1m7f winner this season; makes quick reappearance after 2m4f Ayr second on Friday</span><span class="rp-comment rp-comment-full">Dual 1m7f winner this season (heavy/good to soft); gave good account when second off today's career-high mark at Ayr (2m4f, soft) on Friday and has a fighting chance here, providing this race doesn't come too soon.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -1211,7 +1172,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Asta La Vista</span><span class="rp-comment rp-comment-short">Kept on for modest third in Wetherby maiden last month; may progress again in handicaps</span><span class="rp-comment rp-comment-full">Unexposed 5yo who was well beaten in his first two hurdle races but kept on to take a modest third at Wetherby (2m, good) last month and has plenty of scope for further improvement in handicaps.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -1229,7 +1189,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Aeroplane Blonde</span><span class="rp-comment rp-comment-short">Struggled last time and now 0-6 over hurdles but interesting if judged on late-2025 form</span><span class="rp-comment rp-comment-full">Has a tendency to race too freely and is usually held up at the back; struggled to get competitive at Chepstow in February and now 0-6 over hurdles but interesting if judged on some of his form towards the end of last year; not out of this if first-time cheekpieces have positive effect.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -1247,7 +1206,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Caelan</span><span class="rp-comment rp-comment-short">Returns from break on workable mark but Sean Bowen rides the stable's other one</span><span class="rp-comment rp-comment-full">Improved to win good-ground Worcester maiden (2m, good to soft) in September and subsequently made the frame in two 2m Huntington handicaps (good/good to soft); returns from four-month break on workable mark but riding arrangements suggest Trust House is the stable's main hope.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -1265,7 +1223,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Trust House</span><span class="rp-comment rp-comment-short">Won readily at Market Rasen last month, his second run after a layoff; commands respect</span><span class="rp-comment rp-comment-full">Rewarded strong market support when winning readily at Market Rasen (2m, good to soft) last month, on his second run after a layoff, and is now 2-8 over hurdles; 8lb higher here but still commands respect.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -1283,7 +1240,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Eastern Shores</span><span class="rp-comment rp-comment-short">Second on handicap debut (2m) but disappointed when upped to 2m3f; more needed here</span><span class="rp-comment rp-comment-full">No match for winner when second on handicap debut at Huntingdon (2m, soft) in February and disappointed when upped to 2m3f at Bangor last month; not yet fully exposed but needs to find something extra here.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1301,7 +1257,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Corner Forward</span><span class="rp-comment rp-comment-short">Showed only minor promise in his qualifying races but should improve in handicaps</span><span class="rp-comment rp-comment-full">Showed only minor promise in his qualifying races (1m7f-2m1f) but may not have handled heavy ground last time; no surprise if he gets much more competitive on this handicap debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1319,7 +1274,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Chillhi</span><span class="rp-comment rp-comment-short">Flat and dual hurdle winner last summer but makes stable debut after a layoff</span><span class="rp-comment rp-comment-full">Flat and dual hurdle winner during busy summer for James Owen last year but absent since two below-par runs for Alison Thorpe in October; considered only if lively in the market before this stable debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1359,7 +1313,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -1377,7 +1330,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Mythe Bridge</span><span class="rp-comment rp-comment-short">Placed in four of his five chases and has another big role to play</span><span class="rp-comment rp-comment-full">Placed in four of his five chases, most recently when third in first-time cheekpieces (retained) at Wetherby (3m, soft) in February; won't mind if the ground dries out and he has another big role to play.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -1395,7 +1347,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Esperti</span><span class="rp-comment rp-comment-short">Won Fakenham marathon in good style last week and this C&D also suits him well</span><span class="rp-comment rp-comment-full">In-form 9yo who won four-runner marathon at Fakenham (3m5f, good) in pretty good style last week; also very well suited by this C&D and ground slower than good; respected under 7lb penalty.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -1413,7 +1364,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Ahanaglogh</span><span class="rp-comment rp-comment-short">Runner-up in both chases (2m5f/2m4f) and could have untapped potential over 3m</span><span class="rp-comment rp-comment-full">Low-mileage 7yo who came second in his first two chases, the latter at Leicester (2m4f, soft) in February; could have untapped potential over 3m and features prominently in calculations.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -1431,7 +1381,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Bataillon</span><span class="rp-comment rp-comment-short">Beaten favourite last time but remains of interest if judged on Taunton win in January</span><span class="rp-comment rp-comment-full">Unable to justify warm favouritism when well-held fourth at Wincanton (3m1f, good to soft) last month but will appreciate this ease in grade, and the form of his breakthrough win at Taunton (2m7f, good to soft) has worked out well; big player if back on song.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -1449,7 +1398,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Martalmixjac</span><span class="rp-comment rp-comment-short">Won from the front at Ludlow in February but is too inconsistent to rely upon heavily</span><span class="rp-comment rp-comment-full">Kept on well to win from the front at Ludlow (3m, good to soft; front pair clear) in February and remains well handicapped on best of last season's form but he's too inconsistent to rely upon heavily.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -1467,7 +1415,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">I Aint Your Mate</span><span class="rp-comment rp-comment-short">Tailed off on chase/handicap debut but may yet deliver on his Irish point promise</span><span class="rp-comment rp-comment-full">Tailed off when upped to 2m5f for chase/handicap debut at Hereford (soft) in January, but the form of his two Irish point runs in 2024 reads very well and he may yet deliver on that promise under rules.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1485,7 +1432,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Tommys Charm</span><span class="rp-comment rp-comment-short">Out of form this season and needs new tongue-tie to aid a revival</span><span class="rp-comment rp-comment-full">Lightly raced for his age and now 12lb lower than when going close at Wincanton (3m1f, good to soft) at start of last year, but he's been out of form this season and needs first-time tongue-tie to aid a revival.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1503,7 +1449,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">John W Creasy</span><span class="rp-comment rp-comment-short">Dual chase winner last season but out of sorts this term</span><span class="rp-comment rp-comment-full">Dual chase winner on slow ground last season (2m/2m3f) but out of sorts this term and has a lot to prove.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1521,7 +1466,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Swift Jet</span><span class="rp-comment rp-comment-short">Fell in first two chases; subsequently won over hurdles but pulled up on latest outing</span><span class="rp-comment rp-comment-full">Fell in his first two chases (both this winter); bounced back with 14l win over hurdles at Doncaster (3m, good to soft) in February but ran poorly when last in action and is very hard to predict on this return to fences.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -1539,7 +1483,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Henry Box Brown</span><span class="rp-comment rp-comment-short">Ran okay here last month, after a break, but others appeal more</span><span class="rp-comment rp-comment-full">Returned from three-month break with respectable fourth here (2m3f, soft) in March last time and will be fine over this longer trip, but he's not really been firing on all cylinders since last summer; others appeal more.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1557,7 +1500,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Valirann Gold</span><span class="rp-comment rp-comment-short">Produced remarkable late surge to win two starts ago but overall profile is not persuasive</span><span class="rp-comment rp-comment-full">Produced a remarkable late surge to snatch what had looked an unlikely victory at Fontwell (2m5f, good to soft; blinkers removed) last month but this inconsistent 9yo tends to race lazily nowadays and got going too late when back at Fontwell a fortnight ago; other are much less risky.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1575,7 +1517,6 @@
       </div>
 
       <div class="runner " data-win-rank="12">
-        <div class="cell center">12</div>
         <div class="cell"><span class="horse-name">Stadmallen</span><span class="rp-comment rp-comment-short">Modest pointer; could be considered only if lively in the betting before rules return</span><span class="rp-comment rp-comment-full">Seen only once under rules since 2021 and this season's pointing form is very uninspiring; 10lb out of the weights for this stable debut; could be considered only if lively in the betting.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1615,7 +1556,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -1633,7 +1573,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Kellebelle</span><span class="rp-comment rp-comment-short">Arrives in good nick since sent handicapping; not out of things in bid for a maiden win</span><span class="rp-comment rp-comment-full">Arrives in good nick since sent handicapping, third of six at Huntingdon (2m4f) in February; not out of things in her bid for a maiden victory.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -1651,7 +1590,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Yourcardismarked</span><span class="rp-comment rp-comment-short">Did not offer much in three maiden hurdles; bred to be better suited by this longer trip</span><span class="rp-comment rp-comment-full">Did not offer much in three maiden hurdles (around 2m) this year but this son of Harzand goes handicapping now and is bred to be better suited by this longer trip; tongue-tie is also added.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -1669,7 +1607,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Lemon Leaf</span><span class="rp-comment rp-comment-short">Well held last two runs but could still do better for leading yard now going into h'caps</span><span class="rp-comment rp-comment-full">Shaped well on his hurdling debut when second in 2m Aintree novice last May; well held after an absence both runs since at Wincanton and Warwick, but could still do better for leading yard now going into handicaps.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -1687,7 +1624,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Could Be You</span><span class="rp-comment rp-comment-short">Yet to show any form under rules; could still go forward for new yard on h'cap debut</span><span class="rp-comment rp-comment-full">Yet to show any form under rules, pulled up in 2m4f Leicester novice in January on his final run for Ryan Potter; tongue tied on yard/handicap debut and he could still take a step forward given he was placed in Irish points.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -1705,7 +1641,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Mind Hunter</span><span class="rp-comment rp-comment-short">It's now 12 starts since his last success (2022); others are preferred</span><span class="rp-comment rp-comment-full">It's now 12 starts since his last success (2022) and he came in a below-par fifth of seven in 2m4f handicap at Leicester in November; others are preferred.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1723,7 +1658,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Largy Panic</span><span class="rp-comment rp-comment-short">Improved when scoring at Kempton latest; big shout with return to further a likely plus</span><span class="rp-comment rp-comment-full">Lightly raced 6yo who advanced his form on just his second go in handicap company when scoring at Kempton (2m) 29 days ago; up 2lb but showed a good attitude there and has a big shout with this return to further also a likely plus.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1741,7 +1675,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Lancier Des Obeaux</span><span class="rp-comment rp-comment-short">Has cut little ice in three maiden hurdles this year; handicap debutant</span><span class="rp-comment rp-comment-full">Has cut little ice in three maiden hurdles (at up to 2m3f) this year; tongue tied for this handicap debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -1759,7 +1692,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Ferando</span><span class="rp-comment rp-comment-short">Beat only one in 2m3f handicap chase here nine days ago; tongue-strap is refitted here</span><span class="rp-comment rp-comment-full">Looks a low-level maiden and beat only one in 2m3f handicap chase here nine days ago; tongue-strap is refitted here.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1777,7 +1709,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Midnight Ginger</span><span class="rp-comment rp-comment-short">Not discredited when fourth at Warwick 60 days ago; possibilities off a falling mark</span><span class="rp-comment rp-comment-full">On a long losing run but she wasn't discredited on the back of wind surgery when fourth of six in 2m3f Warwick handicap 60 days ago; possibilities off a falling mark.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1795,7 +1726,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">King Berry</span><span class="rp-comment rp-comment-short">Well held in three 2m maiden hurdles this year; tongue tied for handicap debut</span><span class="rp-comment rp-comment-full">Modest form in bumpers (for Ed De Giles) and well held in three 2m maiden hurdles this year, beating one at Newbury last month; tongue tied for his handicap debut with much better required.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -1835,7 +1765,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -1853,7 +1782,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Lion Of The Desert</span><span class="rp-comment rp-comment-short">Still a maiden but he failed to stay in 3m Chepstow handicap 26 days ago; not out of it</span><span class="rp-comment rp-comment-full">Still a maiden but he failed to stay when ninth in 3m Chepstow handicap 26 days ago; not out of things back in trip.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -1871,7 +1799,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Neeps And Tatties</span><span class="rp-comment rp-comment-short">Step forward when second over C&D last month; she can go well again nudged up 1lb</span><span class="rp-comment rp-comment-full">Low-mileage 7yo who took a step forward when second of six in C&D handicap last month; she can go well again nudged up 1lb.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -1889,7 +1816,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Cumhacht</span><span class="rp-comment rp-comment-short">Good second here in February; form franked, so player off same mark in bid for maiden win</span><span class="rp-comment rp-comment-full">Yet to score but he comes here on the back of a good second of six in 2m handicap here in February; the winner and third there have both gone in since, so he's a player off an unchanged mark.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -1907,7 +1833,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Spanish Dancer</span><span class="rp-comment rp-comment-short">Has been brought along steadily; steps up in trip for h'cap debut and capable of better</span><span class="rp-comment rp-comment-full">Has been brought along steadily, fifth of ten in 2m Lingfield novice hurdle in February; steps up in trip now going into handicaps and looks capable of better.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -1925,7 +1850,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Whatmakes Honey B</span><span class="rp-comment rp-comment-short">Has offered little this term, well-held Taunton sixth latest; not easy to make a case for</span><span class="rp-comment rp-comment-full">Ended last season with a breakthrough win at Taunton (2m3f) but she's offered little this season, a well-held sixth back at Taunton (3m) last month; not easy to make a case for.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1943,7 +1867,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Royal Rhythm</span><span class="rp-comment rp-comment-short">Off since pulled up here in November; handily weighted if resurgent after a break</span><span class="rp-comment rp-comment-full">Winless since 2023 and he's been off the track since pulled up in 3m handicap here in November; handily weighted if resurgent after a break.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1961,7 +1884,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Jour dOrage</span><span class="rp-comment rp-comment-short">Never-dangerous seventh in 2m4f Wincanton handicap last month; others appeal more</span><span class="rp-comment rp-comment-full">Still to get his head in front and he came in a never-dangerous seventh in 2m4f Wincanton handicap last month; others appeal more.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -1979,7 +1901,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Mancero</span><span class="rp-comment rp-comment-short">Not disgraced when fourth at Wincanton 20 days ago; no forlorn hope from a falling mark</span><span class="rp-comment rp-comment-full">French hurdles winner; yet to score for his current yard but he wasn't disgraced when fourth of 11 in 2m4f Wincanton handicap 20 days ago given he was set a lot to do; no forlorn hope from a falling mark.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -1997,7 +1918,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Forest Spirit</span><span class="rp-comment rp-comment-short">A fair 1m4f Flat winner but yet to match that form in this sphere; needs to step forward</span><span class="rp-comment rp-comment-full">A fair 1m4f Flat winner but she's yet to match that form in this sphere, fifth of six in C&D handicap in October; needs to step forward after her absence.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2038,7 +1958,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2056,7 +1975,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Margarets Pearl</span><span class="rp-comment rp-comment-short">2l fourth on debut at Wolverhampton and she's a leading contender this afternoon</span><span class="rp-comment rp-comment-full">Belied 20-1 odds when keeping on for 2l fourth of eight on debut at Wolverhampton (5f, AW) a fortnight ago; could be sharper for that experience and today's stiff finish should suit; leading contender.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -2074,7 +1992,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Jolly Good Fellows</span><span class="rp-comment rp-comment-short">Third on recent debut at Wolverhampton and there can be optimism that she'll improve</span><span class="rp-comment rp-comment-full">Kept on for 3l third of seven at 17-2 on debut at Wolverhampton (5f, AW) 11 days ago; her dam was a 5f and 6f (Listed) 2yo winner and there can be optimism that she'll improve; firmly in calculations.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -2092,7 +2009,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Too Many Spirits</span><span class="rp-comment rp-comment-short">Backed into 13-2 on recent debut at Thirsk but was soundly beaten in fifth of eight</span><span class="rp-comment rp-comment-full">Bred to sprint and he was backed in to 13-2 when fifth of eight, beaten just over 8l, on recent debut at Thirsk (5f, good); it will be interesting to see if his backers return but he needs a sizeable step forward.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -2110,7 +2026,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Village Hall</span><span class="rp-comment rp-comment-short">6,000gns yearling; dam unplaced; it's likely this newcomer will improve for the run</span><span class="rp-comment rp-comment-full">6,000gns yearling; second foal; dam unplaced 6f-1m (RPR 44), half-sister to 7f 2yo winner Borsdane Wood, out of unraced sister to dam of July Cup winner Mayson; it's likely this Tasleet newcomer will improve for the run.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2128,7 +2043,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Sea Mirage</span><span class="rp-comment rp-comment-short">Trainer saddled a well-backed 2yo newcomer to win at Thirsk recently; respected on debut</span><span class="rp-comment rp-comment-full">25,000euros foal, £34,000 yearling; second foal; Naval Crown half-brother to 5f AW winner Dandy Breeze (RPR 78); dam placed 6.6f 2yo (69), from talented family; trainer saddled a well-backed 2yo newcomer to win at Thirsk recently; respected on debut, all the more so if strong in the betting.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2146,7 +2060,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Cydney Sweenie</span><span class="rp-comment rp-comment-short">Half-sister to a couple of useful winners; trainer can ready one first time</span><span class="rp-comment rp-comment-full">9,000gns foal, 25,000gns yearling; seventh foal; Caturra half-sister to winners including Vince Le Prince (7f including 2yo; RPR 83), Freyabella (5f AW 2yo; 82); dam French Group-placed 1m 2yo Flat; trainer's horses are running well and he can ready one first time; a possible.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -2164,7 +2077,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Ubettanotblink</span><span class="rp-comment rp-comment-short">Related to several winners but this debutant may be one for further down the line</span><span class="rp-comment rp-comment-full">£10,000 yearling; fifth foal; closely related to 7f/1m winner Adace (RPR 66), half-brother to winners The Spotlight Kid (7f/1m; 74), Haveachatma (5f/6f AW; 71) and Equipped (6f AW; 70); dam 5.5f winner (82); this Ubettabelieveit debutant may be one for further down the line.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -2182,7 +2094,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Claret And Blues</span><span class="rp-comment rp-comment-short">22,000gns yearling; bred to be quick and could have a big part to play on debut</span><span class="rp-comment rp-comment-full">22,000gns yearling; 11th foal; Sergei Prokofiev brother to 5f 2yo winner Barrak (RPR 80), closely related to 6f winner Wichahpi (including 2yo; 78), half-brother to six winners including Twilight Madness (prolific 5f/6f; 92); bred to be quick and could have a big part to play on debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2222,7 +2133,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2240,7 +2150,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Lady Youmzain</span><span class="rp-comment rp-comment-short">Created an excellent impression when winning on debut at Beverley; the one to beat</span><span class="rp-comment rp-comment-full">Hello Youmzain filly who created an excellent impression when making a winning debut in 5f Beverley novice in September, drawing clear last 1f; she looks to have plenty more to offer this year and is the one to beat.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -2258,7 +2167,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Uncertainty</span><span class="rp-comment rp-comment-short">Fair maiden for Richard Hannon but last of four for new yard at Southwell; more is needed</span><span class="rp-comment rp-comment-full">Showed fair form at 6f/7f without winning for Richard Hannon at 2yrs but she came in last of four for her new yard in 1m Southwell nursery in November; lots more is needed.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -2276,7 +2184,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Reader</span><span class="rp-comment rp-comment-short">Debut Goodwood second but only eighth at Chelmsford after; worth another chance</span><span class="rp-comment rp-comment-full">Shaped well when a debut second in 6f novice at Goodwood but she came in only eighth in 6f Chelmsford maiden later in October; this Mohaather filly is worth another chance.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -2294,7 +2201,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Elemma</span><span class="rp-comment rp-comment-short">This Starman filly can't be ruled out, especially if the betting speaks in her favour</span><span class="rp-comment rp-comment-full">135,000gns yearling; half-sister to five winners, notably Justifier (7f/7.5f Listed; RPR 106) and The Man (5f; RPR 102); dam, 5f/6f winner (RPR 95), is a half-sister to St Leger winner Kew Gardens; this Starman filly can't be ruled out, especially if the betting speaks in her favour.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2312,7 +2218,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Town Queen</span><span class="rp-comment rp-comment-short">In same ownership as Lady Youmzain but this daughter of Blue Point needs considering</span><span class="rp-comment rp-comment-full">160,000euros yearling; half-sister to three winners, notably Raving Royal (12.4f; RPR 85); dam Canadian 6f and 8.5f (Grade 3) AW 2yo winner (RPR 99); in same ownership as Lady Youmzain but this daughter of Blue Point needs considering.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -2352,7 +2257,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2370,7 +2274,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Daizen</span><span class="rp-comment rp-comment-short">Improved form when winning Ayr maiden last September; needs another step forward on return</span><span class="rp-comment rp-comment-full">Runner-up in two nurseries (6f, soft/AW) prior to getting off the mark at the sixth attempt in a maiden at Ayr (6f, soft) last September; that was an improved performance but he needs another step forward on this reappearance, in view of the handicapper's reaction.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -2388,7 +2291,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Daydreama</span><span class="rp-comment rp-comment-short">Close third in sales race at York last October but that was over 7f and he got outpaced</span><span class="rp-comment rp-comment-full">Won two novice contests last summer (good; including C&D) and kept on for close third of 14 in sales race at York (7f, good) in October; his peak form puts him in the picture but there's a suspicion the drop back in trip will be against him on his reappearance; gelded since last time.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -2406,7 +2308,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Alaminos</span><span class="rp-comment rp-comment-short">Won on debut last August; disappointing next time but pulled hard; retains potential</span><span class="rp-comment rp-comment-full">Won a big-field maiden on debut at Thirsk (6f, good to firm) last August; disappointing at Haydock (6f, good) in September but pulled hard; brings potential to this 3yo campaign and could prove to be ahead of the handicapper, provided he settles better.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2424,7 +2325,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Anaisa</span><span class="rp-comment rp-comment-short">Listed win at Ripon last August; that form isn't particularly strong but not discounted</span><span class="rp-comment rp-comment-full">She ran 11 times last year and won twice, including Listed race at Ripon (6f, good) last August; that was relatively modest form for the grade and she needs to prove she's capable off this sort of mark, but is not discounted.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -2442,7 +2342,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Cape Ashizuri</span><span class="rp-comment rp-comment-short">Plenty of promise last year; not obviously well treated but he could have more to offer</span><span class="rp-comment rp-comment-full">Won on debut at Ayr (6f, good to soft) last July; finished last in Group 2 next time and runner-up in Redcar novice (6f, good) last November when last seen; gelded since; not obviously well treated off opening mark but his pedigree provides hope that he'll have more to offer.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2460,7 +2359,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Reciprocated</span><span class="rp-comment rp-comment-short">Failed to kick on last season but looked seriously good to begin with; has been gelded</span><span class="rp-comment rp-comment-full">Looked seriously good when winning last June on his first two starts (6f, good/soft); failed to kick on subsequently in Listed race, Group 2 and a nursery, but returns having been gelded and he's a strong contender if tapping back into his initial promise; wears first-time cheekpieces.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -2478,7 +2376,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Awraad</span><span class="rp-comment rp-comment-short">Course novice winner who was Listed runner-up last August; not ruled out on reappearance</span><span class="rp-comment rp-comment-full">Won on debut here (5f, good) last April and close second to Anaisa in Listed race at Ripon in August (6f, good; albeit weak form for the grade); disappointing in nursery at Carlisle shortly after and she's 9lb higher for this return to action, but she's not ruled out for a trainer among the winners.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2518,7 +2415,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2536,7 +2432,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Antrim</span><span class="rp-comment rp-comment-short">Two wins this winter; merely mid-division at Newcastle recently but not written off</span><span class="rp-comment rp-comment-full">Front-runner who won at Newcastle (1m2f, AW) in December and Meydan (1m3f, dirt) in January; merely mid-division back in Britain at Newcastle (1m2f, AW) recently but that was a hotter race than this and he's not written off.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -2554,7 +2449,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Have Secret</span><span class="rp-comment rp-comment-short">Won at Redcar last November and could build on last month's fifth at Doncaster</span><span class="rp-comment rp-comment-full">Won at Redcar (1m2f, good) last November and not beaten far when fifth of 12 at Doncaster (1m2f, good to soft) last month; could show the benefit of that latest outing today and he's one to consider.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -2572,7 +2466,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Insanity</span><span class="rp-comment rp-comment-short">Went close off this mark at York last October; won on 2024 reappearance; respected</span><span class="rp-comment rp-comment-full">Soundly beaten on final run last term but on heavy ground, and it was a campaign in which he frequently ran really well, going close off this mark at York (1m2f, good) in October; won on his reappearance in 2024; respected.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -2590,7 +2483,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Fireblade</span><span class="rp-comment rp-comment-short">2 wins last year (1m4f/2m) but probably vulnerable over a trip this short on reappearance</span><span class="rp-comment rp-comment-full">Did well for his new yard last season, winning twice (1m4f/2m, good to firm); his current mark maybe isn't beyond him but he's never run over a trip this short and he's probably vulnerable on his reappearance.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -2608,7 +2500,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Romieu</span><span class="rp-comment rp-comment-short">Up and down in Britain last season but should be capable of winning off his current mark</span><span class="rp-comment rp-comment-full">Very lightly raced, ex-French 5yo; up and down among his five British starts last season but ran some big races, including first time up, and he should be capable of winning off his current mark.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2626,7 +2517,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Marhaba Ghaiyyath</span><span class="rp-comment rp-comment-short">Progressive in last year's 3yo campaign and on the shortlist after an encouraging comeback</span><span class="rp-comment rp-comment-full">Progressive in last year's 3yo campaign, going close at Glorious Goodwood (1m2f, good) in July; did pretty well to finish sixth on last month's return at Kempton (1m3f, AW) where he failed to settle and suffered interference; that run may have got the freshness out of him; on the shortlist.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2644,7 +2534,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Flying Frontier</span><span class="rp-comment rp-comment-short">Lightly raced 6yo; two wins from last four starts; could have a big say if fully tuned up</span><span class="rp-comment rp-comment-full">Ran just three times last year, winning at Sandown (1m2f, good to firm) on the second occasion, and soft ground there may not have suited when last seen; also unproven on good to soft; this lightly raced 6yo is capable of having a big say if fully tuned up and handling conditions.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2662,7 +2551,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Military Air</span><span class="rp-comment rp-comment-short">Trainer has done extremely well with French recruits over the years; betting interesting</span><span class="rp-comment rp-comment-full">Useful in France, finishing third in a Listed race last season (1m4f, good to soft); changed hands for 45,000gns in October and his new trainer has done extremely well with French recruits over the years; interesting to see how he goes in the betting on stable debut, for which he wears a hood.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2680,7 +2568,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Parlando</span><span class="rp-comment rp-comment-short">Plenty of good AW form since December; three wins on turf; not ruled out each-way</span><span class="rp-comment rp-comment-full">Two AW wins in December (1m2f/9.4f) and good third at Kempton (1m4f, AW) last month; no threat at Newcastle (1m2f, AW) last time but that was a hot contest and this three-time turf winner is not ruled out each-way.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2698,7 +2585,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Savvy Victory</span><span class="rp-comment rp-comment-short">Went 0-9 last year but he's dropped down the weights and could improve for recent comeback</span><span class="rp-comment rp-comment-full">His form deteriorated last year and he went 0-9; however, he's dropped down the weights and could improve for his recent comeback in a Listed race at Kempton (fourth); this C&D winner is not ruled out.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -2716,7 +2602,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Sunriseontheboyne</span><span class="rp-comment rp-comment-short">Four wins in Ireland last year but hasn't shown in Britain this year and is 2lb wrong here</span><span class="rp-comment rp-comment-full">Four wins in Ireland last year and he's one to watch in the betting, but he's finished down the field at big odds on his three outings in Britain this year and is 2lb out of the handicap today.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2756,7 +2641,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2774,7 +2658,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Yorkshire Glory</span><span class="rp-comment rp-comment-short">Gained superb ninth success of winter at Newcastle latest; player once more back on turf</span><span class="rp-comment rp-comment-full">Gained a superb ninth success of the winter in 6f Newcastle handicap 25 days ago; gamely making all; reverts to turf now off a career-high mark but he's a big player once more.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -2792,7 +2675,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Wish This</span><span class="rp-comment rp-comment-short">Not disgraced after five months off with Southwell sixth ten days ago; possibilities</span><span class="rp-comment rp-comment-full">Signed off last season with 6f success at Newcastle and he wasn't disgraced after five months off when sixth in 6f Southwell handicap ten days ago, fading late on; possibilities.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -2810,7 +2692,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Great</span><span class="rp-comment rp-comment-short">Not discredited for new yard when sixth at Thirsk 11 days ago; enters calculations</span><span class="rp-comment rp-comment-full">A fair 6f winner for Richard Hannon in 2025; changed hands for 25,000 guineas and not discredited on just his second run for new yard when sixth of 15 in 6f Thirsk handicap 11 days ago; enters calculations.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -2828,7 +2709,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Newsreader</span><span class="rp-comment rp-comment-short">Largely in good form for his current yard last term so he's no forlorn hope on his return</span><span class="rp-comment rp-comment-full">A three-time 7f winner for Kevin Philippart de Foy in 2024; largely in good form for his current yard last term so he's no forlorn hope on his return.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2846,7 +2726,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Palmarian</span><span class="rp-comment rp-comment-short">Failed to go on last season; patiently-ridden seventh for new yard at Southwell on return</span><span class="rp-comment rp-comment-full">Capable of fair form but he failed to go on for John and Thady Gosden last season; off five months before a patiently-ridden seventh of ten for his new yard in 6f Southwell handicap 19 days ago; can build on it now.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2864,7 +2743,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">No Return</span><span class="rp-comment rp-comment-short">Good Lingfield second at start of year but below par since, beating one there latest</span><span class="rp-comment rp-comment-full">A fair ex-Irish 6f scorer in 2025; kickstarted this year with a good Lingfield second but below par since, hood tried when beating one back there 25 days ago; more is needed back on turf.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -2882,7 +2760,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Valentine Catcher</span><span class="rp-comment rp-comment-short">Didn't prove easy to catch right in 2025; ninth of 15 in 6f Thirsk handicap 11 days ago</span><span class="rp-comment rp-comment-full">Didn't prove the easiest to catch right in 2025 and only ninth of 15 in 6f Thirsk handicap 11 days ago; needs to take a big step forward.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2900,7 +2777,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Diamont Katie</span><span class="rp-comment rp-comment-short">Encouraging AW return until Southwell fifth last month; had wind op and could bounce back</span><span class="rp-comment rp-comment-full">A fair 6f scorer in the first half of 2025; made an encouraging return from seven months off on the AW this winter until only fifth of seven at Southwell (6f; tongue tied) last month; has since undergone breathing surgery and no surprise to see her bounce back.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2918,7 +2794,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Hectic</span><span class="rp-comment rp-comment-short">Back this year with solid fourths at Newcastle and Chelmsford; ought to be in the shake-up</span><span class="rp-comment rp-comment-full">Scored at Ripon (6f) in a relatively light campaign in 2025 and back this year with solid fourth placings in handicaps at Newcastle (7f) and Chelmsford (6f); ought to be in the shake-up eased 1lb.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -2936,7 +2811,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Hi Lord</span><span class="rp-comment rp-comment-short">A fair 5f winner for Roger Fell in 2024 but has offered little promise for current yard</span><span class="rp-comment rp-comment-full">A fair 5f winner for Roger Fell in 2024 but has offered little promise for his current yard, visored when beating one at Southwell (6f) last month.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -2976,7 +2850,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -2994,7 +2867,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Lion City</span><span class="rp-comment rp-comment-short">Bumper winner; lightly raced on the Flat but he's failed to threaten in his two handicaps</span><span class="rp-comment rp-comment-full">Bumper winner who is lightly raced on the Flat but he's failed to threaten in his two handicaps in this code and has to raise his game.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -3012,7 +2884,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Different Drum</span><span class="rp-comment rp-comment-short">Won over h'dles at Carlisle recently and ran well here last June; could be firmly involved</span><span class="rp-comment rp-comment-full">Out of form on the Flat between November-January but ran well here last June and he won over hurdles at Carlisle 17 days ago; could be firmly involved now he's back on song.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -3030,7 +2901,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Royal Deeside</span><span class="rp-comment rp-comment-short">In good form over fences this month and he ran well here last April; could be a contender</span><span class="rp-comment rp-comment-full">Tailed off on his last three Flat starts but ran well when second here (2m2f, good) last April and he's been in good form over fences this month; could be a contender.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3048,7 +2918,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Achnamara</span><span class="rp-comment rp-comment-short">Hasn't run badly on last two Flat starts and trainer has won two of the last six runnings</span><span class="rp-comment rp-comment-full">Well beaten over hurdles on his last two starts but hasn't run badly on his last two Flat outings (1m4f/2m, AW) and his trainer has won two of the last six runnings of this race; not discounted.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -3066,7 +2935,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Home And Dry</span><span class="rp-comment rp-comment-short">Tailed off over hurdles recently but after some time off; won his last Flat outing</span><span class="rp-comment rp-comment-full">Best Flat form has come on AW and he was tailed off over hurdles 19 days ago; however, that was his first run since last October and back then he won in this code at Chelmsford (2m, AW); has shown some promise on grass over hurdles; not discounted.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3084,7 +2952,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Lillistar</span><span class="rp-comment rp-comment-short">Below best over hurdles recently but good run on AW previously and this test could suit</span><span class="rp-comment rp-comment-full">Below her best over hurdles 16 days ago but runner-up on the Flat at Newcastle (2m, AW) last month; consistent in this code last August-October and she's shaped as though this test of stamina could suit; on the shortlist.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -3102,7 +2969,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Edwardtheninth</span><span class="rp-comment rp-comment-short">0-11 but some good runs on AW for this yard and could be suited by extreme test of stamina</span><span class="rp-comment rp-comment-full">0-11 but he's run some good races at up to an extended 2m on AW since joining this yard and he's dropped some hints that he could be suited by this extreme test of stamina.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3120,7 +2986,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Izakaya</span><span class="rp-comment rp-comment-short">Two wins last autumn and she could improve for last month's return to action on AW</span><span class="rp-comment rp-comment-full">Won two in a row on the Flat (2m1f/2m, soft) last autumn and running well when falling three out on hurdle debut in December; always in rear back on the Flat last month but that came after a 109-day break and she could leave than run behind this afternoon.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3138,7 +3003,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Ebendi</span><span class="rp-comment rp-comment-short">Basement mark but sole win came in 2020 & this 9yo struggled to get competitive last year</span><span class="rp-comment rp-comment-full">He's dropped to a basement mark but his sole win came in 2020 and this 9yo struggled to get competitive last year; first run since last October.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3156,7 +3020,6 @@
       </div>
 
       <div class="runner " data-win-rank="12">
-        <div class="cell center">12</div>
         <div class="cell"><span class="horse-name">Lady Phoebe</span><span class="rp-comment rp-comment-short">On a competitive mark and ran pretty well over hurdles latest; trainer won this last year</span><span class="rp-comment rp-comment-full">Just one win from her 28 starts and she needs to prove her stamina, but she's on a competitive mark on her Flat form last August/September and she ran pretty well over hurdles three weeks ago; trainer won this last year.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3174,7 +3037,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Capone</span><span class="rp-comment rp-comment-short">11yo who has struggled on AW on his three starts this year; major turnaround is necessary</span><span class="rp-comment rp-comment-full">He's tumbled down the weights but this 11yo has struggled on AW on his three starts this year and a major turnaround is necessary.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3192,7 +3054,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Charlie Darling</span><span class="rp-comment rp-comment-short">Back to form when third on AW recently and he stayed well in Ireland; in with a chance</span><span class="rp-comment rp-comment-full">Ran well at up to an extended 2m2f on turf in Ireland for Gavin Cromwell and he returned to form when third at Southwell (2m, AW) recently on his third start back from a long absence; in with a chance.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3232,7 +3093,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -3250,7 +3110,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Hidden Verse</span><span class="rp-comment rp-comment-short">Not disgraced after eight months off when sixth at Bath recently; one to consider</span><span class="rp-comment rp-comment-full">A two-time 5f scorer in 2025; not disgraced after eight months off when sixth of 13 in 5f Bath handicap 16 days ago; one to consider with that run under his belt.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3268,7 +3127,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Tanjen</span><span class="rp-comment rp-comment-short">Not seen out after poor 12th at Southwell in September; needs to hit the ground running</span><span class="rp-comment rp-comment-full">Scored twice on AW in 2025 last autumn but he wasn't seen out after a poor 12th at Southwell (5f) in September; needs to hit the ground running after seven months off.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -3286,7 +3144,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Speeding Bullet</span><span class="rp-comment rp-comment-short">Good Haydock second in September; course winner could have more to offer in 2026; player</span><span class="rp-comment rp-comment-full">Got off the mark for his current yard over 6f here last June and signed off with an excellent runner-up at Haydock (5f) in September; that form worked out well and he could have more to offer in 2026 so he's a player.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3304,7 +3161,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Komorkis</span><span class="rp-comment rp-comment-short">Encouraging start for new yard with Nottingham fourth 13 days ago; in the mix with hood on</span><span class="rp-comment rp-comment-full">A fair 5f winner for Richard Fahey in 2025; changed hands for 1,400 guineas after but she made an encouraging start for her new yard with fourth of seven in 5f Nottingham handicap 13 days ago; in the mix with hood added.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3322,7 +3178,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Midnight Lir</span><span class="rp-comment rp-comment-short">Without a victory since 2023 and he beat one at Newcastle when last seen out in October</span><span class="rp-comment rp-comment-full">Without a victory since 2023 and he beat one in 5f Newcastle handicap when last seen out in October; lots more is needed after six months off.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3340,7 +3195,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Betweenthesticks</span><span class="rp-comment rp-comment-short">Returned with Wolverhampton win; this C&D scorer is not taken lightly in his current mood</span><span class="rp-comment rp-comment-full">Returned from six months off with success in 5f Wolverhampton handicap 17 days ago; up 2lb but this C&D scorer is not taken lightly in his current mood.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -3358,7 +3212,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Military Girl</span><span class="rp-comment rp-comment-short">Scored on Catterick return last season and mainly performed with credit after; considered</span><span class="rp-comment rp-comment-full">Scored on her reappearance at Catterick (5f) last season and mainly performed with credit after; she's now 3lb below that winning mark so needs considering.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3376,7 +3229,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Fuji Mountain</span><span class="rp-comment rp-comment-short">Beat one at Doncaster on return; blinkers go on now and he could take a step forward</span><span class="rp-comment rp-comment-full">Winless since 2024 but he went without his usual tongue tie (still absent) when beating one in 5f Doncaster handicap on his recent return; blinkers go on now and he could take a step forward.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3394,7 +3246,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Sergeant Mayer</span><span class="rp-comment rp-comment-short">Without cheekpieces when C&D 11th latest; can take a step forward in refitted headgear</span><span class="rp-comment rp-comment-full">Off six months and went without his usual cheekpieces when 11th over C&D two weeks ago; he scored twice at Ripon (5f) last May so no surprise to see him take a step forward here in refitted headgear.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3412,7 +3263,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Dark Kestrel</span><span class="rp-comment rp-comment-short">A dual 5f winner at Newcastle this year but yet to show his best form on turf</span><span class="rp-comment rp-comment-full">Kept busy on the AW this winter and already a dual 5f winner at Newcastle; not out of things if translating that form but he's yet to show his best form on turf.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3453,7 +3303,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -3471,7 +3320,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Final Appeal</span><span class="rp-comment rp-comment-short">Showed plenty when just edged out by the winner at Nottingham 13 days ago on his debut.</span><span class="rp-comment rp-comment-full">Showed plenty when just edged out by the winner at Nottingham (5f, good; 5-4) 13 days ago on his first outing; this AW debut looks a perfect opportunity to open his account.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3489,7 +3337,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Blackberry Bold</span><span class="rp-comment rp-comment-short">A place behind Final Appeal on her debut at Nottingham 13 days ago.</span><span class="rp-comment rp-comment-full">Showed plenty of speed only to be run out of it close home when a place behind Final Appeal on her debut at Nottingham (5f, good) 13 days ago; clearly has ability but similar forcing tactics could leave her vulnerable on this AW debut.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3507,7 +3354,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Noble Raider</span><span class="rp-comment rp-comment-short">Yard had their first juvenile winner of the season here this month.</span><span class="rp-comment rp-comment-full">£42,000 yearling; second foal by Persian Force; half-brother to Italian 1m 2yo winner King Of Fire; dam unplaced 6f-1m 2yo (RPR 43), closely related to 7f/7.5f winner Crackin Dream, out of Italian 7f Group 3 winner; his sire was an early sort who won the Brocklesby and yard had their first juvenile winner of the season here this month so must come into consideration on this debut.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -3525,7 +3371,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Marralyn</span><span class="rp-comment rp-comment-short">Stable going well but bred for middle distances and should do better in time.</span><span class="rp-comment rp-comment-full">£30,000 yearling; second foal by Minzaal; dam 1m2f winner (RPR 95), half-sister to winners Jureer (French 1m/1m3f) and Cueros (8.5f-1m4f), out of maiden sister to HK/Singaporean 1m-1m2f Group 1 winner Dunboyne Express; stable going well but bred for middle distances and should do better in time.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3543,7 +3388,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Magical Life</span><span class="rp-comment rp-comment-short">Moderate form in two runs this month; easy to dismiss.</span><span class="rp-comment rp-comment-full">Moderate form in two runs this month; easy to dismiss.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3583,7 +3427,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -3601,7 +3444,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Crown Inn To Win</span><span class="rp-comment rp-comment-short">Has shown improvement since stepping up in trip, finishing second on his last two runs.</span><span class="rp-comment rp-comment-full">Has shown improvement since stepping up in trip, finishing second on his last two runs despite taking a keen hold, the latest over C&D last month; sports a first-time hood and if that helps him to settle then he holds strong claims.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -3619,7 +3461,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Steel Fixer</span><span class="rp-comment rp-comment-short">Tailed off on handicap debut at Doncaster on return to action last month.</span><span class="rp-comment rp-comment-full">Well held in three runs last year; tailed off on handicap debut at Doncaster (1m2f, good to soft) on return to action last month; steps up in trip on AW debut and needs to show significant improvement.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -3637,7 +3478,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Moon Is Up</span><span class="rp-comment rp-comment-short">Yet to be placed from five starts but was only beaten 4l on her return last month.</span><span class="rp-comment rp-comment-full">Yet to be placed from five starts but was only beaten 4l on her return to action at Kempton (1m4f, AW) last month; has been dropped 3lb and should be competitive.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3655,7 +3495,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Forever Perfect</span><span class="rp-comment rp-comment-short">0-5 but didn't shape badly up in trip when third of seven over C&D 15 days ago.</span><span class="rp-comment rp-comment-full">0-5 but didn't shape badly up in trip when third of seven over C&D 15 days ago; a similar performance should see her in the frame.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3673,7 +3512,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Corduroy</span><span class="rp-comment rp-comment-short">0-6 but showed there was a race in him when third over C&D last month.</span><span class="rp-comment rp-comment-full">0-6 but showed there was a race in him when third in a similar contest over C&D last month; sold for 16,500gns to join new yard subsequently and should be thereabouts.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3691,7 +3529,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Itsonlyrockandroll</span><span class="rp-comment rp-comment-short">Soundly beaten on all three starts but makes handicap debut at a low level for top yard.</span><span class="rp-comment rp-comment-full">Soundly beaten on all three starts but makes handicap debut at a low level for top yard; no surprise if she shows significant improvement.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3731,7 +3568,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -3749,7 +3585,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Em Four</span><span class="rp-comment rp-comment-short">Creditable third at Leicester (6f, good; 3-1 favourite) last week; this drop back to 5f?</span><span class="rp-comment rp-comment-full">Won twice on the AW this year, the most recent from a 2lb lower mark at Kempton (6f); creditable third on turf at Leicester (6f, good; 3-1 favourite) last week; how he'll cope with dropping back to 5f (0-4) remains to be seen; isn't discounted.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -3767,7 +3602,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Midnight Call</span><span class="rp-comment rp-comment-short">Stylish C&D winner latest; a career-high mark (up 9lb) demands more; enters calculations.</span><span class="rp-comment rp-comment-full">Notched her fifth course win since November, justifying favouritism in style (Class 6; C&D) latest; this career-high mark (up 9lb) demands more, but she has to enter calculations with Joanna Mason another positive jockey booking.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -3785,7 +3619,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Binadham</span><span class="rp-comment rp-comment-short">1-15; close third over C&D (5-1) 32 days ago; these newly applied cheekpieces worth a go.</span><span class="rp-comment rp-comment-full">Yet to win on AW (0-7) and hasn't won anywhere since scoring on debut at Yarmouth (5f maiden) in April 2024; thereabouts lately, including when no extra close home over C&D (5-1) 32 days ago; newly applied cheekpieces are worth a go.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3803,7 +3636,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Diomed Spirit</span><span class="rp-comment rp-comment-short">Form levels have dipped since January; is 2-4 over C&D; can cheekpieces rekindle a spark?</span><span class="rp-comment rp-comment-full">Won from a similar mark at Lingfield (5f; 8-1) in November; form levels have dipped since finishing third back there in January, failing to beat a single rival the last twice; is 2-4 over C&D, so it's possible that added cheekpieces can rekindle a spark.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3821,7 +3653,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Smooth Silesie</span><span class="rp-comment rp-comment-short">Won at her beloved Yarmouth (5f, good to soft) last October; low-key on AW recently.</span><span class="rp-comment rp-comment-full">Won at her beloved Yarmouth (5f, good to soft; from 4lb lower) last October; hasn't been at her best since returning to AW recently; this is a fraction easier and she could strip fitter but others are more appealing.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -3839,7 +3670,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Phoenix Beach</span><span class="rp-comment rp-comment-short">Four C&D wins; fair mark but three places (over 4l) behind Shalaa Asker over C&D latest.</span><span class="rp-comment rp-comment-full">Four C&D wins (from marks in the 60s); excuses when a closing third over C&D on penultimate start; hung right when three places (over 4l) behind Shalaa Asker subsequently; has won for Kieran O'Neill but needs everything to drop his way.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -3857,7 +3687,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Shalaa Asker</span><span class="rp-comment rp-comment-short">Fast-finishing runner-up over C&D latest; key player despite another slight weights nudge.</span><span class="rp-comment rp-comment-full">Rated 53 when winning at Chelmsford (5f) in December but has been the model of consistency since (311522); didn't have the clearest of passages when fast-finishing runner-up over C&D latest; key player despite another slight weights nudge.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3897,7 +3726,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -3915,7 +3743,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Beaune</span><span class="rp-comment rp-comment-short">Got off the mark when a shock winner at Lingfield in February; won again over C&D since.</span><span class="rp-comment rp-comment-full">Got off the mark when a shock winner at Lingfield (1m4f; 40-1) in February but showed that was no fluke when runner-up twice since and went in again over C&D 11 days ago; up 5lb but still on the upgrade.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -3933,7 +3760,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Wave Rock</span><span class="rp-comment rp-comment-short">Got off the mark when winning at this venue in February off 3lb lower.</span><span class="rp-comment rp-comment-full">Got off the mark when winning at this venue (9.5f) in February off 3lb lower for today's jockey Donagh Murphy; pulled too hard to give her any chance at Newcastle (1m2f) last month and she will need to settle to get this extra distance.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -3951,7 +3777,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Rubellite</span><span class="rp-comment rp-comment-short">Runner-up to progressive rival at Southwell (1m6f) latest on debut for this trainer.</span><span class="rp-comment rp-comment-full">6-38, the bulk of them for Stella Barclay; with Richard Fahey for some of 2025, winning over 1m4f here (3lb lower) last September; runner-up to progressive rival at Southwell (1m6f) latest on debut for this trainer; a possible.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -3969,7 +3794,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Late Claim</span><span class="rp-comment rp-comment-short">Made successful handicap debut at Lingfield in December but below that form recently.</span><span class="rp-comment rp-comment-full">Made successful handicap debut at Lingfield (1m5f, Polytrack) in December and finished runner-up three times since, including over C&D; wheels have come off lately, however, and cheekpieces worn last time are retained.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -3987,7 +3811,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Knight Of Magic</span><span class="rp-comment rp-comment-short">Tends to race freely and needs to settle better to fulfil his potential.</span><span class="rp-comment rp-comment-full">Has three wins on AW, including two here (one over C&D); tends to race freely and needs to settle better to fulfil his potential; second over hurdles two weeks ago.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4005,7 +3828,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">The Bay Warrior</span><span class="rp-comment rp-comment-short">Has seven wins on AW and is now 6lb lower than for the last of those last September.</span><span class="rp-comment rp-comment-full">Has seven wins on AW and is now 6lb lower than for the last of those last September; doesn't look ready to take advantage though.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4023,7 +3845,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Phyllis Burton</span><span class="rp-comment rp-comment-short">Hasn't gone on since making an encouraging debut when fourth at Lingfield last April.</span><span class="rp-comment rp-comment-full">Hasn't gone on since making an encouraging debut when fourth at Lingfield (1m, AW) last April; steps up in trip and hood worn last time is persevered with.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4041,7 +3862,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Three Yorkshiremen</span><span class="rp-comment rp-comment-short">Scored over C&D last November but 10lb rise has seen him falter in five subsequent runs.</span><span class="rp-comment rp-comment-full">Scored over C&D last November but 10lb rise has seen him falter in five subsequent runs; mark is gradually coming down but doesn't look ready to strike.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4081,7 +3901,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4099,7 +3918,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Star Marian</span><span class="rp-comment rp-comment-short">Made all, beating odds-on favourite in a 5f fillies' maiden here latest; probable player.</span><span class="rp-comment rp-comment-full">Returned from a 231-day break, making all to beat an odds-on favourite in a five-runner 5f fillies' maiden here three weeks ago; now rated 6lb higher on her first attempt over 6f (dam won over this trip); probable player in a race lacking strength in depth.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -4117,7 +3935,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Crystal Dagger</span><span class="rp-comment rp-comment-short">Beaten a head at Lingfield on New Year's Eve; no progress (0-2) since joining this trainer</span><span class="rp-comment rp-comment-full">With Ed Walker when beaten a head at Lingfield (7f; 28-1) on New Year's Eve; changed hands in February for 5,000gns and she's yet to shine (0-2) for this trainer; competes from an easing mark, back in trip seeking to make it 11th-time lucky.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -4135,7 +3952,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Tabby</span><span class="rp-comment rp-comment-short">0-5 for D. Quinn; returns to action for a new trainer off a 478-day absence; best watched.</span><span class="rp-comment rp-comment-full">Ability in five juvenile starts for Denis Quinn, going closest when beaten a neck at Southwell (6f fillies' maiden; 50-1) in October 2024; returns to action for a new trainer off a 478-day absence; best watched unless the market speaks favourably.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -4153,7 +3969,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Daytona Lady</span><span class="rp-comment rp-comment-short">Fair third on return from a near six-month break at Southwell (25-1); worth considering.</span><span class="rp-comment rp-comment-full">Now rated 8lb lower than when running on well to down Jax Edge over C&D (15-2) in September 2024; fair third on return from a near six-month break at Southwell (25-1) recently; 1lb lower and could be worth considering.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4171,7 +3986,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Havana Joy</span><span class="rp-comment rp-comment-short">Failed to beat a single rival the last twice (either side of wind surgery); bit to prove.</span><span class="rp-comment rp-comment-full">In the frame in her first five starts (high 60's RPR's), including when twice finding one stronger here (6f-7f); has failed to beat a single rival the last twice (either side of wind surgery) so she has a bit to prove at present; easing mark.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4189,7 +4003,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Filly Foden</span><span class="rp-comment rp-comment-short">Registered back-to-back wins at Southwell & Lingfield (5f) earlier this year; poor since.</span><span class="rp-comment rp-comment-full">Pacy filly; registered back-to-back wins at Southwell and Lingfield (both 5f) earlier this year; disappointing from higher marks since - held up the last twice; the handicapper is cutting her some slack now and she'd be a threat if able to blaze the trail from her wide draw.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4229,7 +4042,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4247,7 +4059,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Port Hedland</span><span class="rp-comment rp-comment-short">Hard to win with and made it 0-13 on the AW when held at Southwell ten days ago.</span><span class="rp-comment rp-comment-full">Hard to win with and made it 0-13 on the AW when held at Southwell ten days ago; steps up in trip but essentially regressive and is some way down the pecking order.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -4265,7 +4076,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Faster Bee</span><span class="rp-comment rp-comment-short">Came good at the 26th attempt over C&D in February when making all; has ran well since.</span><span class="rp-comment rp-comment-full">Came good at the 26th attempt over C&D in February when making all; has ran well twice since over C&D when in the money and a danger to all if he can grab an early lead in returning cheekpieces.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -4283,7 +4093,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Diligent Henry</span><span class="rp-comment rp-comment-short">Below his best on his last two starts but now back on his last winning mark.</span><span class="rp-comment rp-comment-full">Both wins have came over C&D; below his best on his last two starts but now back on his last winning mark; not out of this.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -4301,7 +4110,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Thomas Equinas</span><span class="rp-comment rp-comment-short">On a mounting losing run but didn't fare too badly when fourth at Southwell ten days ago.</span><span class="rp-comment rp-comment-full">All five wins have came at Chelmsford's Polytrack; on a mounting losing run but didn't fare too badly when fourth of 11 at Southwell (7f) ten days ago.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4319,7 +4127,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Bungle Bay</span><span class="rp-comment rp-comment-short">Has been below his best this year and doesn't look ready to strike.</span><span class="rp-comment rp-comment-full">All eight wins have been at this track (five over C&D) but has been below his best this year and doesn't look ready to strike.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4337,7 +4144,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Star Of Atlantis</span><span class="rp-comment rp-comment-short">Stayed on well in a similar race here last month; drop in trip not certain to suit.</span><span class="rp-comment rp-comment-full">Dual winner but ran poorly in a couple of classifieds this year before staying on well in a similar race here (8.5f) last month; on a decent mark but may do better back over 1m.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4355,7 +4161,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Sanditon</span><span class="rp-comment rp-comment-short">Got off the mark at Chelmsford in February but has failed to build on that since.</span><span class="rp-comment rp-comment-full">Got off the mark at Chelmsford (7f, AW) in February but has failed to build on that since; down to a career-low mark and capable if he can return to form.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4373,7 +4178,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Alyara</span><span class="rp-comment rp-comment-short">Just 1-34 on AW and she fared better when fourth here last time.</span><span class="rp-comment rp-comment-full">Just 1-34 on AW and although she fared better when fourth here (6f) last time, she is not a good betting proposition; steps back up to 7f.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4391,7 +4195,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Tomarlo</span><span class="rp-comment rp-comment-short">Has finished last on two of his three starts for current trainer.</span><span class="rp-comment rp-comment-full">Ex-Irish; sole success came at Dundalk (6f) in November 2024; has finished last on two of his three starts for current trainer; hard to fancy.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4431,7 +4234,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4449,7 +4251,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Bad Habits</span><span class="rp-comment rp-comment-short">Poor strike-rate (1-27) but has twice been edged out in tight finishes recently; possible.</span><span class="rp-comment rp-comment-full">Poor strike-rate (1-27) but has twice been edged out in tight finishes recently, latterly when failing to reel in Gladiadora at Southwell (7f; 9-1); pestered for the lead, reportedly running &quot;too free&quot;, when disappointing over C&D 11 days ago; possible.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -4467,7 +4268,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Top Star</span><span class="rp-comment rp-comment-short">Yet to win (0-10); runner-up to Flicka's Girl over 6f here latest; 7f is the major unknown</span><span class="rp-comment rp-comment-full">Yet to win (0-10); runner-up in two of his last three starts, keeping-on to chase home the revitalised Flicka's Girl over 6f here (Class 6 classified; 14-1) four weeks ago; tackles 7f for the first time, a risk even though his dam was a Listed-placed 7f AW winner.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4485,7 +4285,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Gundogan</span><span class="rp-comment rp-comment-short">Poor strike-rate (1-30); beaten a neck over 6f at Southwell in February; no real joy since</span><span class="rp-comment rp-comment-full">Poor strike-rate (1-30); beaten a neck over 6f at Southwell (Class 6) in February but less productive in three subsequent appearances (6f-7f), although with mitigating circumstances (saddle slipped) latest.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4503,7 +4302,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">So Chic</span><span class="rp-comment rp-comment-short">Dual C&D winner (incl for this rider); lacked for pace when sixth at Lingfield (7f) latest</span><span class="rp-comment rp-comment-full">Two of her four wins have come over this C&D, partnered by Jack Doughty when running down Coconut Bay in a Class 6 classified (10-1) last March; lacked the pace to figure when sixth (Gundogan fifth; 13-8 favourite) over this trip at Lingfield latest.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4521,7 +4319,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Ashford Hill</span><span class="rp-comment rp-comment-short">&quot;Benefited for break&quot; when springing 16-1 surprise at Lingfield (7f) in Jan; mixed since.</span><span class="rp-comment rp-comment-full">2-21; said to have &quot;benefited for the break&quot; when returning to spring a 16-1 surprise at Lingfield (7f, Class 6) in January; wasn't far off those same levels when fourth (beaten 3l) back there next time but latest Kempton effort was only a modest one.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4539,7 +4336,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Ravenglass</span><span class="rp-comment rp-comment-short">1lb lower than when fourth over C&D (25-1) last October; let the market offer a guide.</span><span class="rp-comment rp-comment-full">Two course wins, including when running on well over this trip (Class 6 classified; 9-4 favourite) last March; now rated 1lb lower than when fourth over C&D (25-1) last October; market should guide on seasonal return.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4557,7 +4353,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">The Cutest</span><span class="rp-comment rp-comment-short">12-race maiden; tackles seventh furlong - dam won over 7f-1m - for first time; 1lb 'wrong'</span><span class="rp-comment rp-comment-full">12-race maiden; never dangerous sixth over 6f here (beaten over 5l; 80-1) a fortnight ago; regular hood retained tackling a seventh furlong - dam won over 7f-1m - for the first time; competes from 1lb out of the handicap.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4575,7 +4370,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Street Dancer</span><span class="rp-comment rp-comment-short">Beaten 26l, 19.5l, and 21l respectively in three 7f AW novices/maidens; makes no appeal.</span><span class="rp-comment rp-comment-full">Cost 32,000gns as a 3yo but has been beaten 26l, 19.5l, and 21l respectively in three 7f AW novices/maidens; is very lowly rated for handicap debut, competing from 15lb out of the handicap; makes no appeal.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4593,7 +4387,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Big Gypsy King</span><span class="rp-comment rp-comment-short">Poor showings in five starts - 6f Flat to 2m1f hurdle - for this trainer; headgear tweaked</span><span class="rp-comment rp-comment-full">With Paul and Oliver Cole when a comfortable winner at Chelmsford (7f, Class 6; 5-2 favourite) last May; poor showings in five starts - 6f Flat to 2m1f hurdle - for this trainer; no reason to envisage a change of headgear working the oracle.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4633,7 +4426,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4651,7 +4443,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Kaaranah</span><span class="rp-comment rp-comment-short">Back to winning ways in newly applied cheekpieces over C&D latest; a 4lb rise looks fair.</span><span class="rp-comment rp-comment-full">Caught the eye on penultimate start; justified market support over C&D subsequently (in newly applied cheekpieces), that his first win since September 2023; a 4lb rise looks fair, so he's entitled to be on the premises assuming the headgear continues to have the desired effect.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4669,7 +4460,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Karakula</span><span class="rp-comment rp-comment-short">C&D winner (from 1lb lower) last September; less effective since; is fresh from a break.</span><span class="rp-comment rp-comment-full">Kept on well when making the breakthrough over C&D (from 1lb lower) last September; less effective since, losing a shoe when only fourth of five at Kempton (1m3f); it's possible that she'll return fresher off a 167-day absence.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -4687,7 +4477,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Nuptown Girl</span><span class="rp-comment rp-comment-short">Maiden (0-12); consistent (form figures 26253) since joining Ian Williams; back in trip.</span><span class="rp-comment rp-comment-full">Still a maiden (0-12) but she's been consistent (form figures 26253) since joining Ian Williams; drops back in trip having failed to see out 1m4f at Southwell (third of six, beaten 5l) 24 days ago.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -4705,7 +4494,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Distinction</span><span class="rp-comment rp-comment-short">Step back in the right direction at Pontefract (fifth); this looks a suitable objective.</span><span class="rp-comment rp-comment-full">Won from higher marks at Beverley (1m2f, soft) and Kempton (1m3f) last summer; took a step back in the right direction at Pontefract (fifth) a fortnight ago, and this looks a suitable next objective from 2lb lower; P J McDonald is back aboard.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4723,7 +4511,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Eagles Whistle</span><span class="rp-comment rp-comment-short">C&D winner; perhaps found 1m4f too far at Catterick (6-4 fav) a fortnight ago; chance.</span><span class="rp-comment rp-comment-full">Rattled up a hat-trick for Daragh Bourke (7f-9.5f) earlier in the year; similar level of form since joining this trainer, runner-up over 8.5f here on penultimate start, and perhaps found 1m4f too far at Catterick (6-4 favourite) a fortnight ago; chance.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4741,7 +4528,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Moonlit Cloud</span><span class="rp-comment rp-comment-short">No win since May 2024 (1m2f, Bath); best watched on return from a six-month absence.</span><span class="rp-comment rp-comment-full">No win since May 2024 (1m2f, Bath) but she has fallen a long way in the weights as a result; bogged down on heavy ground at Nottingham last October; it's difficult to know what to expect returned to AW (0-11) off a six-month absence.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4782,7 +4568,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4800,7 +4585,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Taseem</span><span class="rp-comment rp-comment-short">March foal; 1,500gns yearling; dam placed 7f/1m in France; best watched on his debut</span><span class="rp-comment rp-comment-full">March foal; 1,500gns yearling; Tasleet colt; fourth foal; dam placed 7f/1m in France, half-sister to US 1m1f Grade 2 winner Proudinsky and German 1m Group 3 winner Proudance; best watched on debut unless the market speaks favourably.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -4818,7 +4602,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Priscillas Hope</span><span class="rp-comment rp-comment-short">February foal; Ubettabelieveit filly; fifth foal; dam 6f winner (RPR 79); watch betting</span><span class="rp-comment rp-comment-full">February foal; Ubettabelieveit filly; fifth foal; dam 6f winner (RPR 79), sister to French 7.5f/1m1f winner Lagoa, half-sister to French 1m4f winner Luminosite, out of unraced half-sister to US 1m Grade 2 winner Tam Lin; watch the betting on debut.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -4836,7 +4619,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Viking Barbie</span><span class="rp-comment rp-comment-short">March foal; 78,000euros yearling; half-sister to Alpine Girl and Beano Power; one to note</span><span class="rp-comment rp-comment-full">March foal; 78,000euros yearling; Starman filly; fifth foal; half-sister to winners Alpine Girl (5f/6f; RPR 76) and Beano Power (5f; 65); dam unraced half-sister to 1m2f Listed winners Splashdown (dam of 7f 2yo Group 3 winner Aktabantay) and Cosmodrome; market support should be noted on debut.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -4854,7 +4636,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Hamdani Mokhater</span><span class="rp-comment rp-comment-short">March foal; £25,000 yearling; half-brother to six winners; dam a 6f Listed/Group 3 winner</span><span class="rp-comment rp-comment-full">March foal; £25,000 yearling; Mohaather colt; tenth foal; half-brother to six winners including Al Messila (1m; RPR 87), Muatadel (5f-7.4f; 86), Born Slippy (6f 2yo; 83), Cashla Bay (7f 2yo; 82) and Fard (6f; 72); dam 5f/6f winner (including 2yo/Group 3; 109), out of 5f winner; dam won on her debut and he's one to note in the betting.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -4872,7 +4653,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">OGorman</span><span class="rp-comment rp-comment-short">February foal; 20,000gns yearling; dam unraced half-sister to Diamondonthehill</span><span class="rp-comment rp-comment-full">February foal; 20,000gns yearling; Sergei Prokofiev colt; fourth foal; dam unraced half-sister to 7f-1m winner Diamondonthehill, out of 7.5f/1m winning half-sister to winners Summer Chorus (5f/6f), Pirate's Song (6f) and Yuri Gagarin (1m/1m3f); watch the betting on debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -4890,7 +4670,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Siouxperb</span><span class="rp-comment rp-comment-short">April foal; 90,000gns foal, 110,000gns yearling; speedy pedigree and of interest on debut</span><span class="rp-comment rp-comment-full">April foal; 90,000gns foal, 110,000gns yearling; Sioux Nation colt; fifth foal; brother to Group-placed 6f/7f winner Ancestral Land (including 2yo; RPR 103), half-brother to 5f/6f winner Staincliff (including 2yo; 99); dam 5f 2yo winner (76), half-sister to Listed-placed 5f winner Online Alexander; speedy pedigree and he's of interest on debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4930,7 +4709,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -4948,7 +4726,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Brilliant Star</span><span class="rp-comment rp-comment-short">Shaped well when runner-up over 1m at Newcastle on debut; should appreciate this trip</span><span class="rp-comment rp-comment-full">Showed signs of inexperience but shaped well when second of seven on her debut at Newcastle (1m, AW; 11-4) in November; switches to turf having been off since and should appreciate this step up in trip (out of an Irish Oaks winner); leading contender.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -4966,7 +4743,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Fanciulla Del West</span><span class="rp-comment rp-comment-short">Showed ability in both starts over 1m at Newcastle; pedigree suggests this trip will suit</span><span class="rp-comment rp-comment-full">Shaped with encouragement on her debut at Newcastle (1m, AW) in November and she built on that when third of seven over that same C&D next time; off since December but her pedigree suggests she'll be suited by this longer trip.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -4984,7 +4760,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Millies A Minx</span><span class="rp-comment rp-comment-short">Beaten 39l and 48l in two starts last July (7f/1m); absent since and steps up in trip</span><span class="rp-comment rp-comment-full">Beaten 39l and 48l, the latter here over 1m, in two starts last July; absent since and the step up in trip needs to bring about major improvement; best watched.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -5002,7 +4777,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Clarissa Eclipse</span><span class="rp-comment rp-comment-short">Half-sister to winners Colonia (US Grade 3) and Edestriav; market should guide on debut</span><span class="rp-comment rp-comment-full">Ninth foal; half-sister to winners Colonia (8.5f/9.5f including US Grade 3; RPR 97) and Edestriav (French 11.5f); dam unraced half-sister to 1m Group 2 winner Don Bosco; market should guide on debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5020,7 +4794,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Kenkelly</span><span class="rp-comment rp-comment-short">40,000gns yearling; sister to Handsome and half-sister to four winners; dam 1m6f winner</span><span class="rp-comment rp-comment-full">40,000gns yearling; tenth foal; sister to 1m2f/11.6f winner Handsome (RPR 83), half-sister to four winners including Ranch Hand (1m3f-2m including Listed; 109) and Victoria Pollard (1m2f; 88); dam 1m6f winner (101), half-sister to 1m Group 2 winner Passing Glance; interesting newcomer.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5060,7 +4833,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -5078,7 +4850,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Room Fourteen</span><span class="rp-comment rp-comment-short">Raced a tad freely when third at Wolverhampton last month; hood added; turf/h'cap debut</span><span class="rp-comment rp-comment-full">Posted an improved effort on her third start when third in a maiden at Lingfield (1m, AW) in December and she filled that same position next time in a novice at Wolverhampton (9.5f, AW; second has won since) last month; raced a tad freely on that occasion and a hood is now added for this turf/handicap debut; claims.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5096,7 +4867,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Pantiles Gift</span><span class="rp-comment rp-comment-short">Got off the mark when pulling 4.5l clear at Newcastle recently; 6lb penalty; solid claims</span><span class="rp-comment rp-comment-full">Built on the encouragement of his handicap debut and pulled 4.5l clear to win at Newcastle (1m2f, AW) eight days ago; unexposed over this trip and holds solid claims back on turf under a 6lb penalty.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -5114,7 +4884,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Izznt She Hot</span><span class="rp-comment rp-comment-short">Short-headed over 1m at Southwell in September but hasn't progressed since; up in trip</span><span class="rp-comment rp-comment-full">Hasn't progressed since she was short-headed at Southwell (7f, AW) in September and she beat only one rival home when fifth in a handicap at Kempton (1m, AW) 22 days ago; since been dropped 3lb and now steps up to 1m2f.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5132,7 +4901,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Crimson Rambler</span><span class="rp-comment rp-comment-short">Has form figures of 2221142 in handicaps this year; should go well if seeing out the trip</span><span class="rp-comment rp-comment-full">Has form figures of 2221142 in handicaps this year since the blinkers went on, with the wins coming at Southwell (1m, AW) and Wolverhampton (8.5f, AW); has gone up 3lb for his recent runner-up effort at Nottingham but he should go well if seeing out this longer trip.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -5150,7 +4918,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Boilermaker</span><span class="rp-comment rp-comment-short">Seventh in three novice events over 1m last year; gelded; steps up in trip for h'cap debut</span><span class="rp-comment rp-comment-full">Seventh on his debut at Salisbury (1m, heavy) and twice on the AW (also over 1m) in novice events last year; gelded since last seen 141 days ago and now steps up in trip for his handicap debut; market should be informative.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5168,7 +4935,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">King Of Berkshire</span><span class="rp-comment rp-comment-short">16l fourth on his return at Southwell (1m) last month; could be suited by this longer trip</span><span class="rp-comment rp-comment-full">Sent off favourite when third of six here over 7f on his debut last year and he was well beaten at York (1m, good) next time; 16l fourth on his return at Southwell (1m, AW) 26 days ago but he could be suited by this longer trip on handicap debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5186,7 +4952,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Joyful Lawyer</span><span class="rp-comment rp-comment-short">Showed more at Chelmsford last month but didn't build on that last time; turf/h'cap debut</span><span class="rp-comment rp-comment-full">Well held in two starts in November/December; gelded and first-time visor when showing more at Chelmsford (1m2f, AW) last month; failed to build on that at Southwell (1m4f, AW) 16 days ago and now drops back in trip with blinkers tried on his turf/handicap debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5204,7 +4969,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Kokushoku</span><span class="rp-comment rp-comment-short">Behind Crimson Rambler when sixth on his handicap debut last time; visor is retained</span><span class="rp-comment rp-comment-full">Runner-up in small fields (7f/1m) on her first two starts earlier this year but he's failed to match that level in two starts since, including on his handicap debut at Nottingham (8.5f, good; first-time visor) 13 days ago; work to do to reverse that form with Crimson Rambler.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5222,7 +4986,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Heated Moment</span><span class="rp-comment rp-comment-short">Failed to progress from her debut for Ollie Sangster; up in trip for this yard debut</span><span class="rp-comment rp-comment-full">Fifth in a Newbury (7f) maiden on her debut last August but she didn't progress from that in her next four starts (6f/7f), including two handicaps; has left Ollie Sangster since last seen and now steps up in trip for her yard debut having been bought for 4,000gns.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5262,7 +5025,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -5280,7 +5042,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Fenlander</span><span class="rp-comment rp-comment-short">Good second of nine in 6f Southwell handicap 16 days ago; in the mix nudged up 1lb</span><span class="rp-comment rp-comment-full">Remains winless but he resumed from four months off with a good second of nine in 6f Southwell handicap 16 days ago; in the mix nudged up 1lb.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5298,7 +5059,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Ironist</span><span class="rp-comment rp-comment-short">C&D winner; solid fourth back over C&D final run; she can't be ruled out on her return</span><span class="rp-comment rp-comment-full">Consistent sort who got off the mark over C&D in September and backed it up with a solid fourth back over C&D following month; she can't be ruled out on her return.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -5316,7 +5076,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Bill Plumb</span><span class="rp-comment rp-comment-short">Dual C&D scorer; not best drawn when eighth at Southwell in February; possibilities</span><span class="rp-comment rp-comment-full">A dual C&D scorer last autumn; yet to hit top form this term but he wasn't best drawn when eighth of 12 in 6f Southwell handicap in February; possibilities from an easing mark after a break.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -5334,7 +5093,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">My Mate Kev</span><span class="rp-comment rp-comment-short">Resumed winning ways at Newmarket (6f) last May but well below that form subsequently</span><span class="rp-comment rp-comment-full">Resumed winning ways at Newmarket (6f) last May but well below that form subsequently, though not best drawn when 12th at Doncaster (5f) on his return; others appeal more.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center">—</div>
@@ -5352,7 +5110,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Caragio</span><span class="rp-comment rp-comment-short">Shaped well for new yard with Chelmsford second latest, set lot to do; can go one better</span><span class="rp-comment rp-comment-full">A fairly useful 7f winner at his best; gambled on for his new yard and and shaped well when second of 11 in 7f Chelmsford handicap 26 days ago, just edged out having been set plenty to do; up 3lb but he can make amends with cheekpieces refitted.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5370,7 +5127,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Dark Side Thunder</span><span class="rp-comment rp-comment-short">Challenged wide when ninth at Southwell last month; this C&D winner is not out of things</span><span class="rp-comment rp-comment-full">Scored at Chelmsford (6f) in December and not so bad as his recent form figures suggests, challenging wide when ninth in 6f Southwell handicap last month; this C&D winner is not out of things.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5410,7 +5166,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -5428,7 +5183,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Argy Bhaji</span><span class="rp-comment rp-comment-short">Third in two starts last year and runner-up at Newcastle on his return; h'cap/turf debut</span><span class="rp-comment rp-comment-full">Third in two starts on the AW in October and ran another solid race when second of 11 at Newcastle on his 6f reappearance (having been gelded) 33 days ago; switches to turf for his handicap debut and looks a contender.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -5446,7 +5200,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Eightthreeone</span><span class="rp-comment rp-comment-short">Made a winning handicap debut at Southwell two weeks ago; contender following a 2lb rise</span><span class="rp-comment rp-comment-full">Showed ability in maiden company last year and made a winning handicap debut on his reappearance at Southwell (6f, AW) two weeks ago; returning to turf should be no problem and he's a contender following a 2lb rise.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5464,7 +5217,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Ocean Of Storms</span><span class="rp-comment rp-comment-short">Pulled too hard on handicap debut over 7f two months ago; drops back to 6f; hood removed</span><span class="rp-comment rp-comment-full">Stepped forward from his first two efforts when fourth of nine at Wolverhampton (6f, AW) in October; subsequently gelded but he pulled too hard on handicap debut at Newcastle (7f, AW; hooded) 61 days ago; drops back in trip with the hood removed.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5482,7 +5234,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Space Bear</span><span class="rp-comment rp-comment-short">Won over 7f on his debut last July; solid efforts over 6f in two starts for this stable</span><span class="rp-comment rp-comment-full">Won over 7f at Wolverhampton last July when trained by Marco Botti; good second at Lingfield (6f, AW) on stable debut and ran another solid race over that C&D when fifth 18 days ago; claims if coping with the return to turf.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -5500,7 +5251,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Wild Rosie</span><span class="rp-comment rp-comment-short">Held in both starts since a promise debut (all at around 1m); drops to 6f for yard debut</span><span class="rp-comment rp-comment-full">Shaped with promise when fourth on her debut at Southwell (1m, good to firm) last August but she was well held in her next two starts (both at around 1m); has since left Owen Burrows and drops to 6f for her handicap/yard debut (same owner).</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5518,7 +5268,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Angel Summer</span><span class="rp-comment rp-comment-short">Showed more when a 4l third at Lingfield in January; makes her turf and handicap debut</span><span class="rp-comment rp-comment-full">Well held in two starts last year but she showed more when 4l third of five in a novice at Lingfield (6f, AW) 87 days ago; now makes her turf and handicap debut; open to improvement.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5536,7 +5285,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Eyes Front</span><span class="rp-comment rp-comment-short">Twice runner-up in maiden company last year (7f); has failed to progress in handicaps</span><span class="rp-comment rp-comment-full">Runner-up in maiden company on two occasions last June (both 7f) but he's not built on those efforts in three handicaps, including two since being gelded; drops back to 6f with cheekpieces back on (worn once previously); others preferred.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5576,7 +5324,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -5594,7 +5341,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Gorgeous Mr George</span><span class="rp-comment rp-comment-short">Three-time course winner; below his best when last seen 182 days ago but could bounce back</span><span class="rp-comment rp-comment-full">Three-time course winner (two over C&D), the most recent coming last August off 13lb higher, and he was runner-up here over 1m in October off today's mark; below his best when last seen 182 days ago but he could bounce back on his return.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -5612,7 +5358,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Man Of Desert</span><span class="rp-comment rp-comment-short">0-7 but his best efforts have been here over 1m; struggled when last seen; now tries 7f</span><span class="rp-comment rp-comment-full">0-7 but his best efforts have been at this track over 1m, including when fourth of seven in a handicap on good ground last June; dropped away tamely at Newcastle (1m, AW) in October on his first start after being gelded and now tries 7f for the first time having been off since.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -5630,7 +5375,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Miletus</span><span class="rp-comment rp-comment-short">Runner-up in two of his three starts for this stable; hood goes on; ground is a concern</span><span class="rp-comment rp-comment-full">Sole win from 13 starts came in a 1m novice at Windsor on soft ground in May 2024 when trained by Charlie Hills; runner-up at Lingfield (1m, AW) on stable debut in February and again at Doncaster latest (7f, good to soft; first-time tongue-tie); hood is now added; quicker ground would be a concern.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5648,7 +5392,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Candonomore</span><span class="rp-comment rp-comment-short">Four-time winner for previous yard; runner-up over 1m at Kempton latest start; claims</span><span class="rp-comment rp-comment-full">Won four times for Tim Easterby (7f/1m), the most recent off 4lb lower at Newcastle (7f, AW) in September; runner-up at Kempton (1m, AW) last time on his fourth start for this yard and he won't mind the return to 7f back on turf; place claims.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5666,7 +5409,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Shimmering Spin</span><span class="rp-comment rp-comment-short">Mostly struggled since winning a maiden at Chelmsford; drops to 7f with cheekpieces added</span><span class="rp-comment rp-comment-full">Sole win from 15 starts came in a maiden at Chelmsford (1m, AW) in September but he's mostly struggled since and failed to beat a rival home at Southwell (1m, AW) last time on his first start for 112 days; now drops to 7f with cheekpieces applied on this return to turf.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -5684,7 +5426,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Grabajabba</span><span class="rp-comment rp-comment-short">Lightly raced on grass and he ran well when runner-up at Doncaster 23 days ago; claims</span><span class="rp-comment rp-comment-full">Three-time winner on the AW over 7f and he ran well despite not really settling when second of 16 at Doncaster (7f, good to soft) 23 days ago; that was just his third go on the grass and he can remain competitive.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5702,7 +5443,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Mister Mojito</span><span class="rp-comment rp-comment-short">2-2 over C&D and posted some solid efforts when last seen; has since had wind surgery</span><span class="rp-comment rp-comment-full">2-2 over C&D, with the most recent of those wins coming last May off the same mark as today; solid efforts on the AW when last seen and he's since undergone wind surgery for the second time; contender back at this track.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5720,7 +5460,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Dashing Dick</span><span class="rp-comment rp-comment-short">Has posted some good efforts at this track; 4lb higher than when last seen and may need it</span><span class="rp-comment rp-comment-full">C&D winner in 2021; posted some good efforts last year, including here (form figures 3213432235 at this track), and ended with a win at Newmarket (6f, good to soft) in November; yet to win from a mark this high and he's usually needed his reappearance.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5738,7 +5477,6 @@
       </div>
 
       <div class="runner " data-win-rank="10">
-        <div class="cell center">10</div>
         <div class="cell"><span class="horse-name">Philanthropist</span><span class="rp-comment rp-comment-short">Both wins on the AW but does act on turf; seventh on his return; cheekpieces now go on</span><span class="rp-comment rp-comment-full">Both of his wins have been on AW but he does act on turf; strong in the betting when seventh at Newcastle (7f, AW) on his reappearance 25 days ago, albeit beaten only 2l; claims with cheekpieces first time.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5756,7 +5494,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Documenting</span><span class="rp-comment rp-comment-short">13yo who has won on 12 occasions; on a good mark but likely best watched on his return</span><span class="rp-comment rp-comment-full">13yo who has won on 12 occasions, the latest in December 2024 at Wolverhampton; on a good mark but he ended last season with some below-par efforts and is likely best watched on his first start for 194 days.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5774,7 +5511,6 @@
       </div>
 
       <div class="runner " data-win-rank="12">
-        <div class="cell center">12</div>
         <div class="cell"><span class="horse-name">Rogue Allegiance</span><span class="rp-comment rp-comment-short">Without a win since his debut but he ran well on his first start for this yard; up in trip</span><span class="rp-comment rp-comment-full">Sole win came on his debut at Newcastle (6f, AW) in December 2024 but he ran well when runner-up at Leicester (6f, good) on his stable debut eight days ago, shaping as if he's worth another go at 7f; contender if backing that effort up.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5792,7 +5528,6 @@
       </div>
 
       <div class="runner " data-win-rank="11">
-        <div class="cell center">11</div>
         <div class="cell"><span class="horse-name">Captain Parma</span><span class="rp-comment rp-comment-short">Dual AW winner but he's been below his best in both starts on turf, including last time</span><span class="rp-comment rp-comment-full">Doubled his tally on the AW when winning at Chelmsford (7f; first-time visor) in February and he was a close third there next time; however, below best in both starts on turf, including at Doncaster (7f, good to soft) 23 days ago; headgear last five starts but not today.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5832,7 +5567,6 @@
     </div>
     <div class="table-scroll">
 <div class="col-labels">
-<div class="col-label center">Rank</div>
 <div class="col-label left">Horse</div>
 <div class="col-label center">V1</div>
 <div class="col-label center">V2</div>
@@ -5850,7 +5584,6 @@
 </div>
 
       <div class="runner top3" data-win-rank="3">
-        <div class="cell center">3</div>
         <div class="cell"><span class="horse-name">Ibiza Lights</span><span class="rp-comment rp-comment-short">Down the field in three starts on the AW last year; open to progress on turf/h'cap debut</span><span class="rp-comment rp-comment-full">Down the field in three starts on the AW at the end of last year (1m/7f); steps back up to 1m for turf debut and she's open to improvement now switched to handicaps; watch the betting.</span></div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
@@ -5868,7 +5601,6 @@
       </div>
 
       <div class="runner " data-win-rank="4">
-        <div class="cell center">4</div>
         <div class="cell"><span class="horse-name">Akrivos</span><span class="rp-comment rp-comment-short">0-10 but has posted some solid efforts on the AW; below his best latest; cheekpieces go on</span><span class="rp-comment rp-comment-full">0-10 but he has posted some solid efforts on the AW; below his best at Southwell (7f, AW) 26 days ago and the switch back to turf isn't sure to suit; cheekpieces now added.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
@@ -5886,7 +5618,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="1">
-        <div class="cell center">1</div>
         <div class="cell"><span class="horse-name">Shes Crafty</span><span class="rp-comment rp-comment-short">0-9 but did best of those from off the pace at Leicester on stable debut; back up to 1m</span><span class="rp-comment rp-comment-full">Nine-race maiden but she posted an encouraging effort when fourth of 17 at Leicester (7f, good) on her stable debut eight days ago, doing best of those from off the pace and leaving the impression she's worth another go at 1m; holds claims.</span></div>
         <div class="cell center"><span class="medal-wrap rank-1"><span class="medal-ribbon"></span><span class="rank-badge">1</span></span></div>
         <div class="cell center">—</div>
@@ -5904,7 +5635,6 @@
       </div>
 
       <div class="runner " data-win-rank="5">
-        <div class="cell center">5</div>
         <div class="cell"><span class="horse-name">Lady Of Clover</span><span class="rp-comment rp-comment-short">Kept on from off the pace for sixth at Southwell last time; claims if handling turf</span><span class="rp-comment rp-comment-full">Didn't seem to get home at Wolverhampton (8.5f, AW) on her handicap debut last month but she kept on for sixth under more patient tactics at Southwell (1m, AW) 12 days ago; place claims if handling the return to turf.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5922,7 +5652,6 @@
       </div>
 
       <div class="runner top3" data-win-rank="2">
-        <div class="cell center">2</div>
         <div class="cell"><span class="horse-name">Lucky Sevens</span><span class="rp-comment rp-comment-short">Dropped away up straight last time having been wide early; cheekpieces for this turf debut</span><span class="rp-comment rp-comment-full">Didn't beat a rival home on his first three starts and he dropped away up the straight on handicap debut at Wolverhampton (8.5f, AW) 36 days ago, having been caught wide early on; cheekpieces added for his turf debut.</span></div>
         <div class="cell center"><span class="medal-wrap rank-2"><span class="medal-ribbon"></span><span class="rank-badge">2</span></span></div>
         <div class="cell center">—</div>
@@ -5940,7 +5669,6 @@
       </div>
 
       <div class="runner " data-win-rank="7">
-        <div class="cell center">7</div>
         <div class="cell"><span class="horse-name">Very Demure</span><span class="rp-comment rp-comment-short">Well held in each of her five starts but she may be happier back at 1m; cheekpieces go on</span><span class="rp-comment rp-comment-full">Well held in each of her five starts, including in handicap company on her last two outings (1m2f/1m4f); now has cheekpieces on for the first time on her AW debut and she may be happier back at 1m.</span></div>
         <div class="cell center">—</div>
         <div class="cell center"><span class="medal-wrap rank-3"><span class="medal-ribbon"></span><span class="rank-badge">3</span></span></div>
@@ -5958,7 +5686,6 @@
       </div>
 
       <div class="runner " data-win-rank="6">
-        <div class="cell center">6</div>
         <div class="cell"><span class="horse-name">Regal And Real</span><span class="rp-comment rp-comment-short">Dropped away after making a big move at Wolverhampton last time; makes his turf debut</span><span class="rp-comment rp-comment-full">Beat only one rival home on his handicap debut last month and he dropped away up the straight after making a big move at Wolverhampton (8.5f, AW; first-time visor) 28 days ago; makes his turf debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5976,7 +5703,6 @@
       </div>
 
       <div class="runner " data-win-rank="8">
-        <div class="cell center">8</div>
         <div class="cell"><span class="horse-name">Three Builders</span><span class="rp-comment rp-comment-short">Beat only one rival home in three starts last year; gelded; hood applied for h'cap debut</span><span class="rp-comment rp-comment-full">Beat only one rival home in three novice/maiden events last year and that came in a four-runner race; however, he's been gelded since last seen and now has the hood applied for his handicap debut; market support should be noted.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
@@ -5994,7 +5720,6 @@
       </div>
 
       <div class="runner " data-win-rank="9">
-        <div class="cell center">9</div>
         <div class="cell"><span class="horse-name">Poetic Grace</span><span class="rp-comment rp-comment-short">Well beaten in her first three starts over 7f; improvement needed on her handicap debut</span><span class="rp-comment rp-comment-full">Well beaten in a Newmarket sales race on her debut in October and down the field in two novice events at Lingfield over 7f (sent off favourite on her second start); improvement needed now stepped up in trip with blinkers applied for her handicap debut.</span></div>
         <div class="cell center">—</div>
         <div class="cell center">—</div>
