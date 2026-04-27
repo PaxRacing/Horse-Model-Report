@@ -380,6 +380,63 @@ body {
   .bar-lbl       { font-size: 0.60em; width: 30px; }
   .disp-num      { font-size: 0.90em; }
 }
+
+/* ── Home page ── */
+.home-panel {
+  display: none; padding: 28px 32px; max-width: 960px;
+}
+.home-panel.active { display: block; }
+.home-title {
+  font-size: 1.4em; font-weight: 800; color: var(--text); margin-bottom: 4px;
+}
+.home-subtitle {
+  font-size: 0.82em; color: var(--text-muted); margin-bottom: 24px;
+}
+.home-section-hdr {
+  font-size: 0.65em; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--text-muted);
+  padding: 14px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 6px;
+}
+.home-table {
+  width: 100%; border-collapse: collapse;
+}
+.home-table thead th {
+  font-size: 0.66em; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-muted);
+  padding: 6px 10px 5px; text-align: left; border-bottom: 1px solid var(--border);
+}
+.home-row {
+  border-bottom: 1px solid var(--border);
+  cursor: pointer; transition: background .12s;
+}
+.home-row:hover { background: #f0fdf4; }
+.home-row td { padding: 9px 10px; vertical-align: middle; }
+.home-time  { font-size: 0.82em; font-weight: 700; white-space: nowrap; }
+.home-course { font-size: 0.82em; font-weight: 600; }
+.home-race-name { font-size: 0.75em; color: var(--text-muted); max-width: 200px;
+                  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.home-field { font-size: 0.78em; text-align: center; }
+.home-pick  { font-size: 0.80em; }
+.home-pick-name { font-weight: 600; }
+.home-pick-pct  { color: var(--text-muted); font-size: 0.85em; margin-left: 4px; }
+.home-pick-2, .home-pick-3 { font-size: 0.75em; color: var(--text-muted); }
+.home-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; width: 100%; text-align: left; padding: 0;
+}
+
+/* Home button in sidebar */
+.home-sidebar-btn {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 10px 16px 9px;
+  background: none; border: none; border-bottom: 1px solid var(--border);
+  cursor: pointer; font-family: inherit;
+  font-size: 0.80em; font-weight: 600; color: var(--text-muted);
+  transition: background .12s; text-align: left;
+}
+.home-sidebar-btn:hover  { background: #f0fdf4; color: var(--text); }
+.home-sidebar-btn.active { background: #e6f4e6; color: #1a2e1a; font-weight: 700; }
+.home-sidebar-btn svg    { flex-shrink: 0; }
 </style>
 
 </head>
@@ -390,6 +447,13 @@ body {
       <div class="sidebar-title">Racing Report</div>
       <div class="sidebar-date">Monday 27 April 2026 &nbsp;·&nbsp; 28 races</div>
     </div>
+    <button class="home-sidebar-btn active" id="home-sidebar-btn" onclick="showHome()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+        <polyline points="9 21 9 12 15 12 15 21"/>
+      </svg>
+      Overview
+    </button>
     
     <div class="sidebar-filters">
       <div class="filter-group">
@@ -406,12 +470,312 @@ body {
       </div>
     </div>
     <div id="race-list" style="flex:1;overflow-y:auto;">
-    <div class="sidebar-course" data-course="Bath" data-order="0">Bath</div><button class="race-btn active" onclick="showRace('14:00_bath')" id="btn-14:00_bath" data-course="Bath" data-conf="2" data-time="14:00" data-timeslot="afternoon" data-raceid="14:00_bath" data-order="1"><div class="race-btn-header"><span class="race-btn-time">14:00</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Marinakis</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Qaaeadd</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Moon Over The Sea</span></div></button><button class="race-btn " onclick="showRace('14:30_bath')" id="btn-14:30_bath" data-course="Bath" data-conf="4" data-time="14:30" data-timeslot="afternoon" data-raceid="14:30_bath" data-order="2"><div class="race-btn-header"><span class="race-btn-time">14:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Rating</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Moby Quick</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Party Island</span></div></button><button class="race-btn " onclick="showRace('15:00_bath')" id="btn-15:00_bath" data-course="Bath" data-conf="3" data-time="15:00" data-timeslot="afternoon" data-raceid="15:00_bath" data-order="3"><div class="race-btn-header"><span class="race-btn-time">15:00</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Sovereign Glory</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Global Success</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Leucothea</span></div></button><button class="race-btn " onclick="showRace('15:30_bath')" id="btn-15:30_bath" data-course="Bath" data-conf="2" data-time="15:30" data-timeslot="afternoon" data-raceid="15:30_bath" data-order="4"><div class="race-btn-header"><span class="race-btn-time">15:30</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Angel Numbers</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Solar Invincible</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Saucy Jane</span></div></button><button class="race-btn " onclick="showRace('16:00_bath')" id="btn-16:00_bath" data-course="Bath" data-conf="5" data-time="16:00" data-timeslot="afternoon" data-raceid="16:00_bath" data-order="5"><div class="race-btn-header"><span class="race-btn-time">16:00</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">The Feminine Urge</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">So Smart</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">The Thames Boatman</span></div></button><button class="race-btn " onclick="showRace('16:30_bath')" id="btn-16:30_bath" data-course="Bath" data-conf="3" data-time="16:30" data-timeslot="afternoon" data-raceid="16:30_bath" data-order="6"><div class="race-btn-header"><span class="race-btn-time">16:30</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Happy Banner</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Nakaaha</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Candonomore</span></div></button><button class="race-btn " onclick="showRace('17:00_bath')" id="btn-17:00_bath" data-course="Bath" data-conf="7" data-time="17:00" data-timeslot="evening" data-raceid="17:00_bath" data-order="7"><div class="race-btn-header"><span class="race-btn-time">17:00</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Arvana Belle</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Zoustellar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Mali Star</span></div></button><div class="sidebar-course" data-course="Lingfield (Aw)" data-order="8">Lingfield (Aw)</div><button class="race-btn " onclick="showRace('14:15_lingfield (aw)')" id="btn-14:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="2" data-time="14:15" data-timeslot="afternoon" data-raceid="14:15_lingfield (aw)" data-order="9"><div class="race-btn-header"><span class="race-btn-time">14:15</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Regally Blonde</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Balgowan</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">In The Post</span></div></button><button class="race-btn " onclick="showRace('14:45_lingfield (aw)')" id="btn-14:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="6" data-time="14:45" data-timeslot="afternoon" data-raceid="14:45_lingfield (aw)" data-order="10"><div class="race-btn-header"><span class="race-btn-time">14:45</span><span class="badge-sm conf-mid">Conf 6/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Lequinto</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Travel Agent</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Maharajas Express</span></div></button><button class="race-btn " onclick="showRace('15:15_lingfield (aw)')" id="btn-15:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="1" data-time="15:15" data-timeslot="afternoon" data-raceid="15:15_lingfield (aw)" data-order="11"><div class="race-btn-header"><span class="race-btn-time">15:15</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Spinney</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Barbuda Bay</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">St Hilda</span></div></button><button class="race-btn " onclick="showRace('15:45_lingfield (aw)')" id="btn-15:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="7" data-time="15:45" data-timeslot="afternoon" data-raceid="15:45_lingfield (aw)" data-order="12"><div class="race-btn-header"><span class="race-btn-time">15:45</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Port Road</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">El Matador</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Silver Trumpet</span></div></button><button class="race-btn " onclick="showRace('16:15_lingfield (aw)')" id="btn-16:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="4" data-time="16:15" data-timeslot="afternoon" data-raceid="16:15_lingfield (aw)" data-order="13"><div class="race-btn-header"><span class="race-btn-time">16:15</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Gladiadora</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Dayman</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Bint Havana Gold</span></div></button><button class="race-btn " onclick="showRace('16:45_lingfield (aw)')" id="btn-16:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="7" data-time="16:45" data-timeslot="afternoon" data-raceid="16:45_lingfield (aw)" data-order="14"><div class="race-btn-header"><span class="race-btn-time">16:45</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Tactical Blitz</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Storm Point</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Caviar Cowboy</span></div></button><button class="race-btn " onclick="showRace('17:20_lingfield (aw)')" id="btn-17:20_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="4" data-time="17:20" data-timeslot="evening" data-raceid="17:20_lingfield (aw)" data-order="15"><div class="race-btn-header"><span class="race-btn-time">17:20</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Wonder</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Son Of Man</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Metallo</span></div></button><div class="sidebar-course" data-course="Naas" data-order="16">Naas</div><button class="race-btn " onclick="showRace('17:10_naas')" id="btn-17:10_naas" data-course="Naas" data-conf="5" data-time="17:10" data-timeslot="evening" data-raceid="17:10_naas" data-order="17"><div class="race-btn-header"><span class="race-btn-time">17:10</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Livenka</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Aedhmar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Victorious</span></div></button><button class="race-btn " onclick="showRace('17:45_naas')" id="btn-17:45_naas" data-course="Naas" data-conf="1" data-time="17:45" data-timeslot="evening" data-raceid="17:45_naas" data-order="18"><div class="race-btn-header"><span class="race-btn-time">17:45</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bad Boy Rizz</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Amiata</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">One Cool Bear</span></div></button><button class="race-btn " onclick="showRace('18:15_naas')" id="btn-18:15_naas" data-course="Naas" data-conf="2" data-time="18:15" data-timeslot="evening" data-raceid="18:15_naas" data-order="19"><div class="race-btn-header"><span class="race-btn-time">18:15</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bishopton</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Indigo Dream</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Tango Flare</span></div></button><button class="race-btn " onclick="showRace('18:45_naas')" id="btn-18:45_naas" data-course="Naas" data-conf="8" data-time="18:45" data-timeslot="evening" data-raceid="18:45_naas" data-order="20"><div class="race-btn-header"><span class="race-btn-time">18:45</span><span class="badge-sm conf-high">Conf 8/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Lady Patrona</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Force Noir</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Whammy</span></div></button><button class="race-btn " onclick="showRace('19:15_naas')" id="btn-19:15_naas" data-course="Naas" data-conf="3" data-time="19:15" data-timeslot="evening" data-raceid="19:15_naas" data-order="21"><div class="race-btn-header"><span class="race-btn-time">19:15</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Mission Central</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">King Cuan</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Fahrenheit Seven</span></div></button><button class="race-btn " onclick="showRace('19:45_naas')" id="btn-19:45_naas" data-course="Naas" data-conf="2" data-time="19:45" data-timeslot="evening" data-raceid="19:45_naas" data-order="22"><div class="race-btn-header"><span class="race-btn-time">19:45</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bobby McGee</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Controlled</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Jamestown</span></div></button><button class="race-btn " onclick="showRace('20:15_naas')" id="btn-20:15_naas" data-course="Naas" data-conf="4" data-time="20:15" data-timeslot="evening" data-raceid="20:15_naas" data-order="23"><div class="race-btn-header"><span class="race-btn-time">20:15</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Charm Of Venice</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Cape Primrose</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Arrietty</span></div></button><div class="sidebar-course" data-course="Wolverhampton (Aw)" data-order="24">Wolverhampton (Aw)</div><button class="race-btn " onclick="showRace('17:30_wolverhampton (aw)')" id="btn-17:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="4" data-time="17:30" data-timeslot="evening" data-raceid="17:30_wolverhampton (aw)" data-order="25"><div class="race-btn-header"><span class="race-btn-time">17:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Volendam</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">No Knee Never</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Stockpyle</span></div></button><button class="race-btn " onclick="showRace('18:00_wolverhampton (aw)')" id="btn-18:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="8" data-time="18:00" data-timeslot="evening" data-raceid="18:00_wolverhampton (aw)" data-order="26"><div class="race-btn-header"><span class="race-btn-time">18:00</span><span class="badge-sm conf-high">Conf 8/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Littlecote</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Shayhana</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Exquisite Skye</span></div></button><button class="race-btn " onclick="showRace('18:30_wolverhampton (aw)')" id="btn-18:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="1" data-time="18:30" data-timeslot="evening" data-raceid="18:30_wolverhampton (aw)" data-order="27"><div class="race-btn-header"><span class="race-btn-time">18:30</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Epictetus</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Echalar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Big Sip</span></div></button><button class="race-btn " onclick="showRace('19:00_wolverhampton (aw)')" id="btn-19:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="2" data-time="19:00" data-timeslot="evening" data-raceid="19:00_wolverhampton (aw)" data-order="28"><div class="race-btn-header"><span class="race-btn-time">19:00</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Imelda</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Clementines Star</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Cotai Eye Joe</span></div></button><button class="race-btn " onclick="showRace('19:30_wolverhampton (aw)')" id="btn-19:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="4" data-time="19:30" data-timeslot="evening" data-raceid="19:30_wolverhampton (aw)" data-order="29"><div class="race-btn-header"><span class="race-btn-time">19:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Shes Got The Blues</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Giles Glory</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Electrocution</span></div></button><button class="race-btn " onclick="showRace('20:00_wolverhampton (aw)')" id="btn-20:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="3" data-time="20:00" data-timeslot="evening" data-raceid="20:00_wolverhampton (aw)" data-order="30"><div class="race-btn-header"><span class="race-btn-time">20:00</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Crown Inn To Win</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Bradbury</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Montu</span></div></button><button class="race-btn " onclick="showRace('20:30_wolverhampton (aw)')" id="btn-20:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="5" data-time="20:30" data-timeslot="evening" data-raceid="20:30_wolverhampton (aw)" data-order="31"><div class="race-btn-header"><span class="race-btn-time">20:30</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Forever Noah</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Candy Warhol</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Macarone</span></div></button>
+    <div class="sidebar-course" data-course="Bath" data-order="0">Bath</div><button class="race-btn " onclick="showRace('14:00_bath')" id="btn-14:00_bath" data-course="Bath" data-conf="2" data-time="14:00" data-timeslot="afternoon" data-raceid="14:00_bath" data-order="1"><div class="race-btn-header"><span class="race-btn-time">14:00</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Marinakis</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Qaaeadd</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Moon Over The Sea</span></div></button><button class="race-btn " onclick="showRace('14:30_bath')" id="btn-14:30_bath" data-course="Bath" data-conf="4" data-time="14:30" data-timeslot="afternoon" data-raceid="14:30_bath" data-order="2"><div class="race-btn-header"><span class="race-btn-time">14:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Rating</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Moby Quick</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Party Island</span></div></button><button class="race-btn " onclick="showRace('15:00_bath')" id="btn-15:00_bath" data-course="Bath" data-conf="3" data-time="15:00" data-timeslot="afternoon" data-raceid="15:00_bath" data-order="3"><div class="race-btn-header"><span class="race-btn-time">15:00</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Sovereign Glory</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Global Success</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Leucothea</span></div></button><button class="race-btn " onclick="showRace('15:30_bath')" id="btn-15:30_bath" data-course="Bath" data-conf="2" data-time="15:30" data-timeslot="afternoon" data-raceid="15:30_bath" data-order="4"><div class="race-btn-header"><span class="race-btn-time">15:30</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Angel Numbers</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Solar Invincible</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Saucy Jane</span></div></button><button class="race-btn " onclick="showRace('16:00_bath')" id="btn-16:00_bath" data-course="Bath" data-conf="5" data-time="16:00" data-timeslot="afternoon" data-raceid="16:00_bath" data-order="5"><div class="race-btn-header"><span class="race-btn-time">16:00</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">The Feminine Urge</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">So Smart</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">The Thames Boatman</span></div></button><button class="race-btn " onclick="showRace('16:30_bath')" id="btn-16:30_bath" data-course="Bath" data-conf="3" data-time="16:30" data-timeslot="afternoon" data-raceid="16:30_bath" data-order="6"><div class="race-btn-header"><span class="race-btn-time">16:30</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Happy Banner</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Nakaaha</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Candonomore</span></div></button><button class="race-btn " onclick="showRace('17:00_bath')" id="btn-17:00_bath" data-course="Bath" data-conf="7" data-time="17:00" data-timeslot="evening" data-raceid="17:00_bath" data-order="7"><div class="race-btn-header"><span class="race-btn-time">17:00</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Arvana Belle</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Zoustellar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Mali Star</span></div></button><div class="sidebar-course" data-course="Lingfield (Aw)" data-order="8">Lingfield (Aw)</div><button class="race-btn " onclick="showRace('14:15_lingfield (aw)')" id="btn-14:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="2" data-time="14:15" data-timeslot="afternoon" data-raceid="14:15_lingfield (aw)" data-order="9"><div class="race-btn-header"><span class="race-btn-time">14:15</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Regally Blonde</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Balgowan</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">In The Post</span></div></button><button class="race-btn " onclick="showRace('14:45_lingfield (aw)')" id="btn-14:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="6" data-time="14:45" data-timeslot="afternoon" data-raceid="14:45_lingfield (aw)" data-order="10"><div class="race-btn-header"><span class="race-btn-time">14:45</span><span class="badge-sm conf-mid">Conf 6/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Lequinto</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Travel Agent</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Maharajas Express</span></div></button><button class="race-btn " onclick="showRace('15:15_lingfield (aw)')" id="btn-15:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="1" data-time="15:15" data-timeslot="afternoon" data-raceid="15:15_lingfield (aw)" data-order="11"><div class="race-btn-header"><span class="race-btn-time">15:15</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Spinney</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Barbuda Bay</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">St Hilda</span></div></button><button class="race-btn " onclick="showRace('15:45_lingfield (aw)')" id="btn-15:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="7" data-time="15:45" data-timeslot="afternoon" data-raceid="15:45_lingfield (aw)" data-order="12"><div class="race-btn-header"><span class="race-btn-time">15:45</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Port Road</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">El Matador</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Silver Trumpet</span></div></button><button class="race-btn " onclick="showRace('16:15_lingfield (aw)')" id="btn-16:15_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="4" data-time="16:15" data-timeslot="afternoon" data-raceid="16:15_lingfield (aw)" data-order="13"><div class="race-btn-header"><span class="race-btn-time">16:15</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Gladiadora</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Dayman</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Bint Havana Gold</span></div></button><button class="race-btn " onclick="showRace('16:45_lingfield (aw)')" id="btn-16:45_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="7" data-time="16:45" data-timeslot="afternoon" data-raceid="16:45_lingfield (aw)" data-order="14"><div class="race-btn-header"><span class="race-btn-time">16:45</span><span class="badge-sm conf-high">Conf 7/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Tactical Blitz</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Storm Point</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Caviar Cowboy</span></div></button><button class="race-btn " onclick="showRace('17:20_lingfield (aw)')" id="btn-17:20_lingfield (aw)" data-course="Lingfield (Aw)" data-conf="4" data-time="17:20" data-timeslot="evening" data-raceid="17:20_lingfield (aw)" data-order="15"><div class="race-btn-header"><span class="race-btn-time">17:20</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Wonder</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Son Of Man</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Metallo</span></div></button><div class="sidebar-course" data-course="Naas" data-order="16">Naas</div><button class="race-btn " onclick="showRace('17:10_naas')" id="btn-17:10_naas" data-course="Naas" data-conf="5" data-time="17:10" data-timeslot="evening" data-raceid="17:10_naas" data-order="17"><div class="race-btn-header"><span class="race-btn-time">17:10</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Livenka</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Aedhmar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Victorious</span></div></button><button class="race-btn " onclick="showRace('17:45_naas')" id="btn-17:45_naas" data-course="Naas" data-conf="1" data-time="17:45" data-timeslot="evening" data-raceid="17:45_naas" data-order="18"><div class="race-btn-header"><span class="race-btn-time">17:45</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bad Boy Rizz</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Amiata</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">One Cool Bear</span></div></button><button class="race-btn " onclick="showRace('18:15_naas')" id="btn-18:15_naas" data-course="Naas" data-conf="2" data-time="18:15" data-timeslot="evening" data-raceid="18:15_naas" data-order="19"><div class="race-btn-header"><span class="race-btn-time">18:15</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bishopton</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Indigo Dream</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Tango Flare</span></div></button><button class="race-btn " onclick="showRace('18:45_naas')" id="btn-18:45_naas" data-course="Naas" data-conf="8" data-time="18:45" data-timeslot="evening" data-raceid="18:45_naas" data-order="20"><div class="race-btn-header"><span class="race-btn-time">18:45</span><span class="badge-sm conf-high">Conf 8/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Lady Patrona</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Force Noir</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Whammy</span></div></button><button class="race-btn " onclick="showRace('19:15_naas')" id="btn-19:15_naas" data-course="Naas" data-conf="3" data-time="19:15" data-timeslot="evening" data-raceid="19:15_naas" data-order="21"><div class="race-btn-header"><span class="race-btn-time">19:15</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Mission Central</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">King Cuan</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Fahrenheit Seven</span></div></button><button class="race-btn " onclick="showRace('19:45_naas')" id="btn-19:45_naas" data-course="Naas" data-conf="2" data-time="19:45" data-timeslot="evening" data-raceid="19:45_naas" data-order="22"><div class="race-btn-header"><span class="race-btn-time">19:45</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Bobby McGee</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Controlled</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Jamestown</span></div></button><button class="race-btn " onclick="showRace('20:15_naas')" id="btn-20:15_naas" data-course="Naas" data-conf="4" data-time="20:15" data-timeslot="evening" data-raceid="20:15_naas" data-order="23"><div class="race-btn-header"><span class="race-btn-time">20:15</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Charm Of Venice</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Cape Primrose</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Arrietty</span></div></button><div class="sidebar-course" data-course="Wolverhampton (Aw)" data-order="24">Wolverhampton (Aw)</div><button class="race-btn " onclick="showRace('17:30_wolverhampton (aw)')" id="btn-17:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="4" data-time="17:30" data-timeslot="evening" data-raceid="17:30_wolverhampton (aw)" data-order="25"><div class="race-btn-header"><span class="race-btn-time">17:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Volendam</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">No Knee Never</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Stockpyle</span></div></button><button class="race-btn " onclick="showRace('18:00_wolverhampton (aw)')" id="btn-18:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="8" data-time="18:00" data-timeslot="evening" data-raceid="18:00_wolverhampton (aw)" data-order="26"><div class="race-btn-header"><span class="race-btn-time">18:00</span><span class="badge-sm conf-high">Conf 8/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Littlecote</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Shayhana</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Exquisite Skye</span></div></button><button class="race-btn " onclick="showRace('18:30_wolverhampton (aw)')" id="btn-18:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="1" data-time="18:30" data-timeslot="evening" data-raceid="18:30_wolverhampton (aw)" data-order="27"><div class="race-btn-header"><span class="race-btn-time">18:30</span><span class="badge-sm conf-low">Conf 1/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Epictetus</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Echalar</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Big Sip</span></div></button><button class="race-btn " onclick="showRace('19:00_wolverhampton (aw)')" id="btn-19:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="2" data-time="19:00" data-timeslot="evening" data-raceid="19:00_wolverhampton (aw)" data-order="28"><div class="race-btn-header"><span class="race-btn-time">19:00</span><span class="badge-sm conf-low">Conf 2/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Imelda</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Clementines Star</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Cotai Eye Joe</span></div></button><button class="race-btn " onclick="showRace('19:30_wolverhampton (aw)')" id="btn-19:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="4" data-time="19:30" data-timeslot="evening" data-raceid="19:30_wolverhampton (aw)" data-order="29"><div class="race-btn-header"><span class="race-btn-time">19:30</span><span class="badge-sm conf-mid">Conf 4/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Shes Got The Blues</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Giles Glory</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Electrocution</span></div></button><button class="race-btn " onclick="showRace('20:00_wolverhampton (aw)')" id="btn-20:00_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="3" data-time="20:00" data-timeslot="evening" data-raceid="20:00_wolverhampton (aw)" data-order="30"><div class="race-btn-header"><span class="race-btn-time">20:00</span><span class="badge-sm conf-low">Conf 3/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Crown Inn To Win</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Bradbury</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Montu</span></div></button><button class="race-btn " onclick="showRace('20:30_wolverhampton (aw)')" id="btn-20:30_wolverhampton (aw)" data-course="Wolverhampton (Aw)" data-conf="5" data-time="20:30" data-timeslot="evening" data-raceid="20:30_wolverhampton (aw)" data-order="31"><div class="race-btn-header"><span class="race-btn-time">20:30</span><span class="badge-sm conf-mid">Conf 5/10</span></div><div class="mini-horse"><span class="mini-rank r1">1</span><span class="mini-name">Forever Noah</span></div><div class="mini-horse"><span class="mini-rank r2">2</span><span class="mini-name">Candy Warhol</span></div><div class="mini-horse"><span class="mini-rank r3">3</span><span class="mini-name">Macarone</span></div></button>
     </div>
   </aside>
   <main class="main-panel">
     
-  <div class="racecard active" id="rc-14:00_bath">
+  <div class="home-panel active" id="home-panel">
+    <div class="home-title">Racing Report</div>
+    <div class="home-subtitle">Monday 27 April 2026 &nbsp;·&nbsp; 28 races</div>
+    <table class="home-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Race</th>
+          <th style="text-align:center">Field</th>
+          <th>Confidence</th>
+          <th>Gate</th>
+          <th>Top Picks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="7" class="home-section-hdr">Bath</td></tr>
+  <tr class="home-row" onclick="showRace('14:00_bath')">
+    <td class="home-time">14:00</td>
+    <td>
+      <div class="home-race-name">Download The Fairplay App Apprentice Handicap</div>
+    </td>
+    <td class="home-field">8r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Marinakis</span><span class="home-pick-pct">15%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Qaaeadd</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Moon Over The Sea</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('14:30_bath')">
+    <td class="home-time">14:30</td>
+    <td>
+      <div class="home-race-name">Silvershine Turf Services Handicap</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Rating</span><span class="home-pick-pct">23%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Moby Quick</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Party Island</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('15:00_bath')">
+    <td class="home-time">15:00</td>
+    <td>
+      <div class="home-race-name">Silvershine Turf Services Support Bath Maiden Stakes (GBB Race)</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-low">Conf 3/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 7/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Sovereign Glory</span><span class="home-pick-pct">18%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Global Success</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Leucothea</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('15:30_bath')">
+    <td class="home-time">15:30</td>
+    <td>
+      <div class="home-race-name">Mark Futcher Half-Century Handicap</div>
+    </td>
+    <td class="home-field">10r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 5/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Angel Numbers</span><span class="home-pick-pct">13%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Solar Invincible</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Saucy Jane</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('16:00_bath')">
+    <td class="home-time">16:00</td>
+    <td>
+      <div class="home-race-name">Bet Now With fairplaybet.co.uk Handicap</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-mid">Conf 5/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">The Feminine Urge</span><span class="home-pick-pct">28%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">So Smart</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">The Thames Boatman</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('16:30_bath')">
+    <td class="home-time">16:30</td>
+    <td>
+      <div class="home-race-name">Signs Express Handicap</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-low">Conf 3/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Happy Banner</span><span class="home-pick-pct">19%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Nakaaha</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Candonomore</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('17:00_bath')">
+    <td class="home-time">17:00</td>
+    <td>
+      <div class="home-race-name">Signs Express Proudly Support Bath Racecourse Handicap</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-high">Conf 7/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Arvana Belle</span><span class="home-pick-pct">36%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Zoustellar</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Mali Star</span></div></td>
+  </tr><tr><td colspan="7" class="home-section-hdr">Lingfield (Aw)</td></tr>
+  <tr class="home-row" onclick="showRace('14:15_lingfield (aw)')">
+    <td class="home-time">14:15</td>
+    <td>
+      <div class="home-race-name">Follow @attheraces On X Apprentice Handicap</div>
+    </td>
+    <td class="home-field">8r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 5/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Regally Blonde</span><span class="home-pick-pct">15%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Balgowan</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">In The Post</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('14:45_lingfield (aw)')">
+    <td class="home-time">14:45</td>
+    <td>
+      <div class="home-race-name">Amwins And Aegis Living The Dream Handicap</div>
+    </td>
+    <td class="home-field">5r</td>
+    <td><span class="badge-sm conf-mid">Conf 6/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 7/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Lequinto</span><span class="home-pick-pct">32%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Travel Agent</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Maharajas Express</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('15:15_lingfield (aw)')">
+    <td class="home-time">15:15</td>
+    <td>
+      <div class="home-race-name">Free Race Replays On attheraces.com Restricted Maiden Fillies' Stakes (Bands C And D) (GBB Race)</div>
+    </td>
+    <td class="home-field">12r</td>
+    <td><span class="badge-sm conf-low">Conf 1/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 7/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Spinney</span><span class="home-pick-pct">18%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Barbuda Bay</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">St Hilda</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('15:45_lingfield (aw)')">
+    <td class="home-time">15:45</td>
+    <td>
+      <div class="home-race-name">Tia Giggle Gallop Handicap</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-high">Conf 7/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Port Road</span><span class="home-pick-pct">34%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">El Matador</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Silver Trumpet</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('16:15_lingfield (aw)')">
+    <td class="home-time">16:15</td>
+    <td>
+      <div class="home-race-name">Sky Sports Racing Virgin 512 Handicap</div>
+    </td>
+    <td class="home-field">11r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 4/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Gladiadora</span><span class="home-pick-pct">25%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Dayman</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Bint Havana Gold</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('16:45_lingfield (aw)')">
+    <td class="home-time">16:45</td>
+    <td>
+      <div class="home-race-name">Follow @attheraces On Instagram Handicap</div>
+    </td>
+    <td class="home-field">11r</td>
+    <td><span class="badge-sm conf-high">Conf 7/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 4/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Tactical Blitz</span><span class="home-pick-pct">40%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Storm Point</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Caviar Cowboy</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('17:20_lingfield (aw)')">
+    <td class="home-time">17:20</td>
+    <td>
+      <div class="home-race-name">Download The At The Races App Handicap (GBBPlus Race)</div>
+    </td>
+    <td class="home-field">8r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Wonder</span><span class="home-pick-pct">25%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Son Of Man</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Metallo</span></div></td>
+  </tr><tr><td colspan="7" class="home-section-hdr">Naas</td></tr>
+  <tr class="home-row" onclick="showRace('17:10_naas')">
+    <td class="home-time">17:10</td>
+    <td>
+      <div class="home-race-name">Irish Stallion Farms EBF Fillies Maiden (IRE Incentive Race)</div>
+    </td>
+    <td class="home-field">6r</td>
+    <td><span class="badge-sm conf-mid">Conf 5/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 8/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Livenka</span><span class="home-pick-pct">29%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Aedhmar</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Victorious</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('17:45_naas')">
+    <td class="home-time">17:45</td>
+    <td>
+      <div class="home-race-name">Enjoy Racing TV With A FREE Trial Now Handicap</div>
+    </td>
+    <td class="home-field">12r</td>
+    <td><span class="badge-sm conf-low">Conf 1/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 3/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Bad Boy Rizz</span><span class="home-pick-pct">16%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Amiata</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">One Cool Bear</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('18:15_naas')">
+    <td class="home-time">18:15</td>
+    <td>
+      <div class="home-race-name">Colm White Bookmaker Handicap</div>
+    </td>
+    <td class="home-field">13r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 1/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Bishopton</span><span class="home-pick-pct">20%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Indigo Dream</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Tango Flare</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('18:45_naas')">
+    <td class="home-time">18:45</td>
+    <td>
+      <div class="home-race-name">Irish EBF Median Sires Series Maiden (IRE Incentive Race)</div>
+    </td>
+    <td class="home-field">7r</td>
+    <td><span class="badge-sm conf-high">Conf 8/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 7/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Lady Patrona</span><span class="home-pick-pct">41%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Force Noir</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Whammy</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('19:15_naas')">
+    <td class="home-time">19:15</td>
+    <td>
+      <div class="home-race-name">Anglesey Lodge Equine Hospital Woodlands Stakes (Listed Race)</div>
+    </td>
+    <td class="home-field">16r</td>
+    <td><span class="badge-sm conf-low">Conf 3/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 1/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Mission Central</span><span class="home-pick-pct">15%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">King Cuan</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Fahrenheit Seven</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('19:45_naas')">
+    <td class="home-time">19:45</td>
+    <td>
+      <div class="home-race-name">Naas Racecourse Business Club Blackwater Handicap (Premier Handicap)</div>
+    </td>
+    <td class="home-field">10r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 2/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Bobby McGee</span><span class="home-pick-pct">18%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Controlled</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Jamestown</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('20:15_naas')">
+    <td class="home-time">20:15</td>
+    <td>
+      <div class="home-race-name">Race & Stay Fillies Maiden</div>
+    </td>
+    <td class="home-field">10r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 7/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Charm Of Venice</span><span class="home-pick-pct">26%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Cape Primrose</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Arrietty</span></div></td>
+  </tr><tr><td colspan="7" class="home-section-hdr">Wolverhampton (Aw)</td></tr>
+  <tr class="home-row" onclick="showRace('17:30_wolverhampton (aw)')">
+    <td class="home-time">17:30</td>
+    <td>
+      <div class="home-race-name">Download The Raceday Ready App Amateur Jockeys' Handicap</div>
+    </td>
+    <td class="home-field">13r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 1/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Volendam</span><span class="home-pick-pct">24%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">No Knee Never</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Stockpyle</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('18:00_wolverhampton (aw)')">
+    <td class="home-time">18:00</td>
+    <td>
+      <div class="home-race-name">Enjoy Summer Racing At Wolverhampton Racecourse Maiden Fillies' Stakes (GBB/GBBPlus Race)</div>
+    </td>
+    <td class="home-field">8r</td>
+    <td><span class="badge-sm conf-high">Conf 8/10</span></td>
+    <td><span class="badge-sm gate-high">Gate 8/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Littlecote</span><span class="home-pick-pct">46%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Shayhana</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Exquisite Skye</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('18:30_wolverhampton (aw)')">
+    <td class="home-time">18:30</td>
+    <td>
+      <div class="home-race-name">Country And Western Raceday - 28th June Handicap</div>
+    </td>
+    <td class="home-field">9r</td>
+    <td><span class="badge-sm conf-low">Conf 1/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 5/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Epictetus</span><span class="home-pick-pct">13%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Echalar</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Big Sip</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('19:00_wolverhampton (aw)')">
+    <td class="home-time">19:00</td>
+    <td>
+      <div class="home-race-name">Get Raceday Ready Restricted Maiden Stakes (For Horses In Bands C And D) (GBB Race)</div>
+    </td>
+    <td class="home-field">12r</td>
+    <td><span class="badge-sm conf-low">Conf 2/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 6/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Imelda</span><span class="home-pick-pct">20%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Clementines Star</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Cotai Eye Joe</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('19:30_wolverhampton (aw)')">
+    <td class="home-time">19:30</td>
+    <td>
+      <div class="home-race-name">Free Digital Racecard At raceday-ready.com Handicap</div>
+    </td>
+    <td class="home-field">12r</td>
+    <td><span class="badge-sm conf-mid">Conf 4/10</span></td>
+    <td><span class="badge-sm gate-low">Gate 3/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Shes Got The Blues</span><span class="home-pick-pct">30%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Giles Glory</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Electrocution</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('20:00_wolverhampton (aw)')">
+    <td class="home-time">20:00</td>
+    <td>
+      <div class="home-race-name">Hotel And Conferencing At Wolverhampton Racecourse Handicap</div>
+    </td>
+    <td class="home-field">11r</td>
+    <td><span class="badge-sm conf-low">Conf 3/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 4/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Crown Inn To Win</span><span class="home-pick-pct">24%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Bradbury</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Montu</span></div></td>
+  </tr>
+  <tr class="home-row" onclick="showRace('20:30_wolverhampton (aw)')">
+    <td class="home-time">20:30</td>
+    <td>
+      <div class="home-race-name">Get The Inside Track With raceday-ready.com Handicap</div>
+    </td>
+    <td class="home-field">9r</td>
+    <td><span class="badge-sm conf-mid">Conf 5/10</span></td>
+    <td><span class="badge-sm gate-mid">Gate 4/10</span></td>
+    <td class="home-pick"><div><span class="mini-rank r1">1</span><span class="home-pick-name">Forever Noah</span><span class="home-pick-pct">24%</span></div><div style="margin-top:2px"><span class="mini-rank r2" style="font-size:0.75em">2</span><span class="home-pick-2">Candy Warhol</span></div><div style="margin-top:2px"><span class="mini-rank r3" style="font-size:0.75em">3</span><span class="home-pick-2">Macarone</span></div></td>
+  </tr>
+      </tbody>
+    </table>
+  </div>
+    
+  <div class="racecard " id="rc-14:00_bath">
     <div class="card-wrap">
       <div class="card-header">
         <div style="display:flex;align-items:flex-start;gap:18px">
@@ -8619,9 +8983,23 @@ body {
 </div>
 
 <script>
+function showHome() {
+  document.querySelectorAll('.racecard').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.race-btn').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.home-panel').forEach(el => el.classList.remove('active'));
+  const homeBtn = document.getElementById('home-sidebar-btn');
+  if (homeBtn) homeBtn.classList.add('active');
+  const homePanel = document.getElementById('home-panel');
+  if (homePanel) homePanel.classList.add('active');
+  document.querySelector('.main-panel').scrollTop = 0;
+}
+
 function showRace(raceId) {
   document.querySelectorAll('.racecard').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.race-btn').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.home-panel').forEach(el => el.classList.remove('active'));
+  const homeBtn = document.getElementById('home-sidebar-btn');
+  if (homeBtn) homeBtn.classList.remove('active');
   const card = document.getElementById('rc-' + raceId);
   const btn  = document.getElementById('btn-' + raceId);
   if (card) card.classList.add('active');
@@ -8674,9 +9052,12 @@ function applyFilters() {
     });
   }
 
-  // Jump to first visible race
-  const first = [...list.querySelectorAll('.race-btn')].find(b => b.style.display !== 'none');
-  if (first) showRace(first.dataset.raceid);
+  // Jump to first visible race (only if a race was already showing)
+  const anyRaceActive = [...document.querySelectorAll('.racecard')].some(c => c.classList.contains('active'));
+  if (anyRaceActive) {
+    const first = [...list.querySelectorAll('.race-btn')].find(b => b.style.display !== 'none');
+    if (first) showRace(first.dataset.raceid);
+  }
 }
 </script>
 
